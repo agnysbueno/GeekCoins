@@ -1,0 +1,15 @@
+#button-search,
+#icon-search {
+    position: absolute;
+    left: 23.75%;
+    right: 74.58%;
+    top: 3.91%;
+    bottom: 93.75%;
+    width: 24px;
+    height: 24px;
+}
+
+#button-search {
+    background-color: #ffffff;
+    border: none;
+}
