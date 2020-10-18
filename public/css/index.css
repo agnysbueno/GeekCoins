@@ -88,13 +88,20 @@ main{
     
 }
 #bar-search{
-    width: 330px;
+    width: 94%;
     height: 35px;
     padding-left: 15px;
-    background-color: white;
+    background-color: #ffffff;
     border-style: none;
     font-size: 15px;
     font-weight: 500;
+    border-radius: 8px;
+}
+
+#bar-search:-webkit-autofill{
+    /* Changing input search autocomplete background color to white */
+    -webkit-box-shadow: 0 0 0 30px #ffffff inset;
+    /* -webkit-text-fill-color: #343434 !important; */
 }
 
 #anchor-login{
