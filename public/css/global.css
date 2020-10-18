@@ -2,12 +2,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline-color: #ffffff;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400;500;600;700;800&display=swap');
 html {
     font-family: 'Baloo Da 2', cursive;
     }
+
+p, h1, h2, h3, a, li, input{
+    font-family: 'Baloo Da 2', cursive;
+}
 
 .center{
     margin-left: auto;
@@ -19,5 +24,5 @@ html {
     min-height: 700px;
     height: auto;
     overflow: hidden;
-    background-color: #F9F9F9;
+    background-color: #f1f1f1;
 }

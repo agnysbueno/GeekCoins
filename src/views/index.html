@@ -19,22 +19,52 @@
                 </div>
                 <nav id="menu-items" class="center">  
                     <ul>
-                        <li>Temas</li>
-                        <li>Canecas</li>
-                        <li>Quadros</li>
-                        <li>Camisetas</li>
-                        <li>Mousepads</li>
-                        <li>Capinhas</li>
-                        <li>Coleções</li>
-                        <li>Sobre nós</li>
+                        <a href="#"><li>Temas</li></a>
+                        <a href="#"><li>Canecas</li></a>
+                        <a href="#"><li>Quadros</li></a> 
+                        <a href="#"><li>Camisetas</li></a> 
+                        <a href="#"><li>Mousepads</li></a> 
+                        <a href="#"><li>Capinhas</li></a> 
+                        <a href="#"><li>Coleções</li></a> 
+                        <a href="#"><li>Sobre nós</li></a> 
                     </ul>
                 </nav>
             </header>
-    
+
+            <main>
+                
+                <div id="container-search" class="center">
+
+                    <form id="form-search" action="/src/repositories/products/searchProducts.php" method="GET">
+                        <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="" id="icon-search"></button>
+                        <input type="search" name="search" id="bar-search" placeholder="Pesquisar...">                        
+                    </form>
+                
+                    <a href="#" id="anchor-login">Entre ou cadastre-se</a>
+                    
+                    <div id="container-icons">
+                        <a href="#" class="button-icons">
+                            <img src="../../public/assets/icons/favoritos.svg" alt="" id="icon-wishlist">
+                        </a>
+                        <a href="#" class="button-icons">
+                            <img src="../../public/assets/icons/sacola.svg" alt="" id="icon-shopping">
+                        </a>
+                    </div>                        
+                    
+                </div>
+
+                <section>
+                    <h1 class="center" id="title-release">Lançamentos</h1>
+                    <!--colocar slider aqui-->
+                </section>
+
+            </main>
+            
+
             
         </div>
 
-
+        
 
     </body>
 
