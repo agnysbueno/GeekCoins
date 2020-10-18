@@ -10,6 +10,7 @@ Mousepads <img src="/public/assets/icons/mousepad.svg" widht=auto height=15px> <
 
 ## Criado e Desenvolvido por:
 Agnys Bueno 
+<a class="git" href="https://github.com/larrydiniz" target="_blank"> <img src="/public/assets/icons/github.svg" widht=auto height=15px> </a>
 [<img src="/public/assets/icons/github.svg" widht=auto height=15px>](https://github.com/agnysbueno)  [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/agnys-bueno/) <br/>
 
 Carlos Tadashi 
