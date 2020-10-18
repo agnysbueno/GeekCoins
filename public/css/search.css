@@ -1,15 +1,33 @@
+#search-container {
+    display: flex;
+    width: 1200px;
+    align-items: center;
+    justify-content: left;
+}
+
 #button-search,
 #icon-search {
-    position: absolute;
-    left: 23.75%;
-    right: 74.58%;
-    top: 3.91%;
-    bottom: 93.75%;
-    width: 24px;
-    height: 24px;
+    width: 18px;
+    height: 18px;
+}
+
+/*
+#icon-search {
+    z-index: 1;
 }
 
 #button-search {
     background-color: #ffffff;
     border: none;
 }
+
+#bar-search {
+    position: absolute;
+    width: 626px;
+    height: 28px;
+    left: 330px;
+    top: 31px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 2px 40px;
+} */

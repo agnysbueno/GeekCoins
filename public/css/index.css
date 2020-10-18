@@ -1,0 +1,41 @@
+#menu-index{
+    width: 80%;
+    height: 45px;
+    margin-top: 40px;
+    background-color: #E9BC00;
+    position: relative;
+}
+
+#logo{ 
+    width: 72px;
+    height: 72px;
+    position: absolute;
+    background: url('../assets/icons/logo.svg') no-repeat;
+    z-index: 1;
+    background-size: contain;
+    margin-top: -10px;
+    margin-left: -30px;
+}
+
+#menu-items{
+    width: 85%;
+    height: inherit;
+}
+
+#menu-items ul{
+    width: 100%;
+    height: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#menu-items ul li{
+    width: 80px;
+    height: 26px;
+    list-style: none;
+    background-color: lawngreen;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
