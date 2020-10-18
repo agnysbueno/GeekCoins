@@ -9,13 +9,26 @@ Mousepads <img src="/public/assets/icons/mousepad.svg" widht=auto height=15px> <
 <img src="/public/assets/icons/camisa.svg" widht=auto height=15px> Camisetas <br/>
 
 ## Criado e Desenvolvido por:
-Agnys Bueno [GitHub](https://github.com/agnysbueno) [LinkedIn] (https://www.linkedin.com/in/agnys-bueno/) <br/>
-Carlos Tadashi [GitHub] () [LinkedIn] (https://www.linkedin.com/in/carlos-tadashi-g-ba45b098/) <br/>
-Larissa Diniz [GitHub](https://github.com/larrydiniz) [LinkedIn] (https://www.linkedin.com/in/larrydiniz/) <br/>
-Laura Belmonte [GitHub] () [LinkedIn] (https://www.linkedin.com/in/laura-belmonte-698136187/) <br/>
-Pedro Nesso [GitHub] () [LinkedIn] (https://www.linkedin.com/in/pedro-nesso-5368b4177/) <br/>
-Ruan Nunes [GitHub] (https://github.com/rurnunes) [LinkedIn] (https://www.linkedin.com/in/rurnunes/) <br/>
-Weronika Santos [GitHub] () [LinkedIn] (https://www.linkedin.com/in/weronika-santos/) <br/>
+Agnys Bueno 
+[<img src="/public/assets/icons/github.svg" widht=auto height=15px>](https://github.com/agnysbueno)  [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/agnys-bueno/) <br/>
+
+Carlos Tadashi 
+[<img src="/public/assets/icons/github.svg" widht=auto height=15px>]() [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/carlos-tadashi-g-ba45b098/) <br/>
+
+Larissa Diniz 
+[<img src="/public/assets/icons/github.svg" widht=auto height=15px>](https://github.com/larrydiniz) [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/larrydiniz/) <br/>
+
+Laura Belmonte 
+[<img src="/public/assets/icons/github.svg" widht=auto height=15px>]() [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/laura-belmonte-698136187/) <br/>
+
+Pedro Nesso 
+[<img src="/public/assets/icons/github.svg" widht=auto height=15px>]() [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/pedro-nesso-5368b4177/) <br/>
+
+Ruan Nunes 
+[<img src="/public/assets/icons/github.svg" widht=auto height=15px>](https://github.com/rurnunes) [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/rurnunes/) <br/>
+
+Weronika Santos 
+[<img src="/public/assets/icons/github.svg" widht=auto height=15px>]() [<img src="/public/assets/icons/linkedin.svg" widht=auto height=15px>](https://www.linkedin.com/in/weronika-santos/) <br/>
 *******************************************************************************************************************************************************************
 <img src="/public/assets/images/index.png">
 <img src="/public/assets/images/pesquisa.png">
