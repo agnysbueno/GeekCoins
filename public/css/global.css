@@ -14,6 +14,9 @@ p, h1, h2, h3, a, li, input{
     font-family: 'Baloo Da 2', cursive;
 }
 
+li {
+    list-style: none;
+}
 .center{
     margin-left: auto;
     margin-right: auto;
@@ -25,4 +28,14 @@ p, h1, h2, h3, a, li, input{
     height: auto;
     overflow: hidden;
     background-color: #f1f1f1;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    /*Removing default cancel button */
+    -webkit-appearance: none;
+    /*Creating a new one cancel button with SVG icon*/
+    background-image: url(../assets/icons/times-solid.svg);
+    background-repeat: no-repeat;
+    height: 12px;
+    width: 12px;
 }
