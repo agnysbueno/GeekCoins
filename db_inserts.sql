@@ -128,5 +128,5 @@ INSERT INTO produto_tag VALUES(22, 5, 15);
 INSERT INTO produto_pedido VALUES (1,2,1,2,73.98);
 INSERT INTO produto_pedido VALUES (2,3,2,4,160.00);
 INSERT INTO produto_pedido VALUES (3,1,1,1,33.99);
-INSERT INTO produto_pedido VALUES (4,7,3,3,89.97);
+INSERT INTO produto_pedido VALUES (4,5,3,3,89.97);
 INSERT INTO produto_pedido VALUES (5,4,4,1,69.99);
