@@ -7,6 +7,7 @@
         <title>Geek Coins - Home</title>
         <link href="../../public/css/global.css" rel="stylesheet"/>
         <link href="../../public/css/index.css" rel="stylesheet"/>
+
     </head>
     
     <body>
@@ -34,60 +35,53 @@
             <main>
                 
                 <div id="container-search" class="center">
-                    <form role="search" id="form-search" action="/src/repositories/products/searchProducts.php" method="GET">
+                    <form id="form-search" action="/src/repositories/products/searchProducts.php" method="GET">
                         <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="" id="icon-search"></button>
-                        <input type="search" incremental="incremental" name="search" id="bar-search" placeholder="Pesquisar..." aria-label="Pesquisar produtos pelo site">                        
+                        <input type="search" name="search" id="bar-search" placeholder="Pesquisar...">                        
                     </form>
                 
                     <a href="#" id="anchor-login">Entre ou cadastre-se</a>
                     
                     <div id="container-icons">
-                        <a href="#" class="button-icons" title="Ir para sua Lista de Favoritos">
-                            <img src="../../public/assets/icons/favoritos.svg" alt="Ícone de coração" title="Ir para sua Lista de Favoritos" id="icon-wishlist">
+                        <a href="#" class="button-icons">
+                            <img src="../../public/assets/icons/favoritos.svg" alt="" id="icon-wishlist">
                         </a>
-                        <a href="#" class="button-icons" title="Ir para o Carrinho de Compras">
-                            <img src="../../public/assets/icons/sacola.svg" alt="Ícone de sacola de compras" title="Ir para o Carrinho de Compras" id="icon-shopping">
+                        <a href="#" class="button-icons">
+                            <img src="../../public/assets/icons/sacola.svg" alt="" id="icon-shopping">
                         </a>
                     </div>                        
                 </div>
 
+                
                 <section id="section-releases">
                     <h1 class="center" id="title-release">Lançamentos</h1>
-                    
-                    <div id="container-release">
-                        <input type="radio" class="slide-controller" name="slide" checked />
-                        <input type="radio" class="slide-controller" name="slide" />
-                        <input type="radio" class="slide-controller" name="slide" />
-                        
-                        <ul id="slider-list">
-                            <li class="slide">
-                                <a href="#">
-                                    <img src="../../public/assets/images/camisa-akira-luana.png" alt="Camiseta branca com estampa personalizada do Akira" title="Coleção Você em Akira">
-                                </a>
-                            </li>
-                            <li class="slide">
-                                <a href="#">
-                                    <img src="../../public/assets/images/caneca-akira-luana.png" alt="Caneca com estampa personalizada do Akira" title="Coleção Você em Akira">
-                                </a>
-                            </li>
-                            <li class="slide">
-                                <a href="#">
-                                    <img src="../../public/assets/images/mousepad-akira-luana.png" alt="Mousepad com estampa personalizada do Akira" title="Coleção Você em Akira">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
 
+                    <div class="slider-container">
+                        <div id="slider-images">
+                            <a href="#">
+                                <img class="mySlides" src="../../public/assets/images/camisa-akira-luana.png" style="width:100%">
+                            </a>
+                            <a href="#">
+                                <img class="mySlides" src="../../public/assets/images/caneca-akira-luana.png" style="width:100%">
+                            </a>
+                            <a href="#">
+                                <img class="mySlides" src="../../public/assets/images/mousepad-akira-luana.png" style="width:100%">
+                            </a>
+                        </div>
+
+                        <div class="slide-buttons" style="width:100%">
+                          <span class="button-slide demo" onclick="currentDiv(1)"></span>
+                          <span class="button-slide demo" onclick="currentDiv(2)"></span>
+                          <span class="button-slide demo" onclick="currentDiv(3)"></span>
+                        </div>
+
+                      </div>
                 </section>
 
             </main>
             
-
-            
-        </div>
-
-        
-
+        </div> 
+        <script src="../../public/scripts/index.js"></script>
     </body>
 
 </html>
