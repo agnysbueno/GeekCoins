@@ -5,8 +5,10 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Geek Coins - Home</title>
+
         <link href="../../public/css/global.css" rel="stylesheet"/>
         <link href="../../public/css/index.css" rel="stylesheet"/>
+        <link href="../../public/css/palette.css" rel="stylesheet"/>
 
     </head>
     
@@ -20,14 +22,14 @@
                 </div>
                 <nav id="menu-items" class="center">  
                     <ul>
-                        <a href="#"><li>Temas</li></a>
-                        <a href="#"><li>Canecas</li></a>
-                        <a href="#"><li>Quadros</li></a> 
-                        <a href="#"><li>Camisetas</li></a> 
-                        <a href="#"><li>Mousepads</li></a> 
-                        <a href="#"><li>Capinhas</li></a> 
-                        <a href="#"><li>Coleções</li></a> 
-                        <a href="#"><li>Sobre nós</li></a> 
+                        <a href="#"><li class="preto">Temas</li></a>
+                        <a href="#"><li class="preto">Canecas</li></a>
+                        <a href="#"><li class="preto">Quadros</li></a> 
+                        <a href="#"><li class="preto">Camisetas</li></a> 
+                        <a href="#"><li class="preto">Mousepads</li></a> 
+                        <a href="#"><li class="preto">Capinhas</li></a> 
+                        <a href="#"><li class="preto">Coleções</li></a> 
+                        <a href="#"><li class="preto">Sobre nós</li></a> 
                     </ul>
                 </nav>
             </header>
@@ -40,7 +42,7 @@
                         <input type="search" name="search" id="bar-search" placeholder="Pesquisar...">                        
                     </form>
                 
-                    <a href="#" id="anchor-login">Entre ou cadastre-se</a>
+                    <a href="#" id="anchor-login" class="cinza-escuro">Entre ou cadastre-se</a>
                     
                     <div id="container-icons">
                         <a href="#" class="button-icons">
@@ -54,8 +56,31 @@
 
                 
                 <section id="section-releases">
-                    <h1 class="center" id="title-release">Lançamentos</h1>
+                   
+                    <div class="slider-container">
+                        <div id="slider-images">
+                            <a href="#">
+                                <img class="mySlides" src="../../public/assets/images/camisa-akira-luana.png" style="width:100%">
+                            </a>
+                            <a href="#">
+                                <img class="mySlides" src="../../public/assets/images/caneca-akira-luana.png" style="width:100%">
+                            </a>
+                            <a href="#">
+                                <img class="mySlides" src="../../public/assets/images/mousepad-akira-luana.png" style="width:100%">
+                            </a>
+                        </div>
 
+                        <div class="slide-buttons" style="width:100%">
+                          <span class="button-slide demo" onclick="currentDiv(1)"></span>
+                          <span class="button-slide demo" onclick="currentDiv(2)"></span>
+                          <span class="button-slide demo" onclick="currentDiv(3)"></span>
+                        </div>
+
+                      </div>
+                </section>
+
+                <section id="section-bestsellers">
+                   
                     <div class="slider-container">
                         <div id="slider-images">
                             <a href="#">
@@ -81,7 +106,10 @@
             </main>
             
         </div> 
+
+        <!--SCRIPTS JS-->
         <script src="../../public/scripts/index.js"></script>
+    
     </body>
 
 </html>
