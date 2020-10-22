@@ -140,6 +140,12 @@ main{
     width: 20px;
 }
 
+
+
+/**********Section Lançamentos**********/
+
+
+
 .slider-container{
     width: inherit;
     height: auto;
@@ -154,8 +160,6 @@ main{
     display: flex;
     align-items: center;
 }
-
-/************** buttons *****************/
 
 .slide-buttons {
     text-align: center!important;
@@ -186,3 +190,39 @@ main{
 .mySlides {
     display:none;
 }
+
+
+
+/**********Section Mais Vendidos**********/
+
+
+
+#section-bestsellers {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    min-height: 380px;
+}
+
+#title-bestsellers {
+    font-size: 34px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    height: 450px;
+}
+.card a img {
+    width: inherit;
+    height: 400px;
+}
+
