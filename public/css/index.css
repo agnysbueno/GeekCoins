@@ -54,6 +54,9 @@ main{
     height: auto;   
     min-height: 200px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #container-search{
@@ -144,8 +147,6 @@ main{
 
 /**********Section Lançamentos**********/
 
-
-
 .slider-container{
     width: inherit;
     height: auto;
@@ -195,18 +196,17 @@ main{
 
 /**********Section Mais Vendidos**********/
 
-
-
 #section-bestsellers {
     display: flex;
-    justify-content: space-evenly;
-    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
     height: auto;
     overflow: hidden;
     min-height: 380px;
 }
 
-#title-bestsellers {
+#title-bestsellers, #title-collections {
     font-size: 34px;
     margin-top: 50px;
     margin-bottom: 20px;
@@ -215,14 +215,114 @@ main{
     justify-content: center;
 }
 
+#slider-bestsellers{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .card {
     display: flex;
     align-items: center;
+    flex-direction: column;
     width: 300px;
-    height: 450px;
+    height: 300px;
+    position: relative;
 }
-.card a img {
+
+.card-hover{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(12, 12, 12, 0.85);
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+}
+
+.card-hover p{
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.card-hover #container-icons{
+    margin: 20px 20px 50px 0;
+    width: 90px;
+    align-self: flex-end;
+    height: 35px;
+}
+
+.card-hover #container-icons a{
+    width: 35px;
+    height: 35px;
+}
+
+.card:hover .card-hover{
+    opacity: 1;
+}
+
+.card a {
     width: inherit;
-    height: 400px;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.card a img{
+    width: inherit;
+    height: auto;
+}
+
+.card-info {
+    width: 100%;
+    height: 80px;
+    background-color: #e6e6e6;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-info .title{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.card-info .price{
+    font-weight: 500;
+    font-size: 22px;
+}
+
+
+
+/**********Section Coleções**********/
+
+#section-collections {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 85%;
+    height: auto;
+    overflow: hidden;
+    min-height: 380px;
+}
+
+#slider-collections{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.collections{
+    width: 80%;
+    height: 450px;
+    background-color: cornflowerblue;
 }
 
