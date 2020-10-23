@@ -206,6 +206,11 @@ main{
     min-height: 380px;
 }
 
+#section-bestsellers .icon-arrow,
+#section-collections .icon-arrow {
+    cursor: pointer;
+}
+
 #title-bestsellers, #title-collections {
     font-size: 34px;
     margin-top: 50px;
