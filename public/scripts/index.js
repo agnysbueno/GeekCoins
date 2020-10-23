@@ -1,4 +1,4 @@
-/************************* slider ******************************/
+/************************* slider releases ******************************/
 
 var slideIndex = 1;
 
@@ -43,4 +43,27 @@ function slider(){
     showDivs(slideIndex); 
 
     setTimeout(slider, 3000); 
+}
+
+
+/************************* slider bestsellers ******************************/
+
+var slideCards = 1;
+showCards(slideCards);
+
+function plusCards(n) {
+  showCards(slideCards += n);
+  console.log(n);
+}
+
+function showCards(n) {
+  var i;
+  var x = document.getElementsByClassName("myCards");
+  if (n > x.length) {slideCards = 1}
+  if (n < 1) {slideCards = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+
+  x[slideCards-1].style.display = "flex";
 }
