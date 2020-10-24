@@ -67,3 +67,12 @@ function showCards(n) {
 
   x[slideCards-1].style.display = "flex";
 }
+
+
+function mudaCoracaoParaBranco(){
+  document.getElementById("icon-wishlist").src = "../../public/assets/icons/favoritos-branco.svg"
+}
+
+function mudaSacolaParaBranco(){
+  document.getElementById("icon-shopping").src = "../../public/assets/icons/sacola-branco.svg"
+}

@@ -135,7 +135,7 @@ main{
 }
 
 .button-icons:hover{
-    background-color: #000000;
+    background-color: #333333;
 }
 
 #icon-wishlist,
@@ -297,11 +297,13 @@ main{
     animation: anim 1.5s forwards;
 }
 
-.card-hover p{
+.card-hover #text-hover{
     text-align: center;
-    font-size: 20px;
-    font-weight: 600;
-    color:#343434;
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 4px;
+    cursor: pointer;
 }
 
 .card-hover #container-icons{
@@ -320,10 +322,19 @@ main{
 }
 
 .card-hover #container-icons p{
+    font-size: 14px;
     font-weight: 400;
     margin-left: 10px;  
     color: #FFD72F;
 }
+/* 
+.card-hover #container-icons .button-icons:hover{
+    background-color: #FFD72F;
+}
+
+.card-hover #container-icons .button-icons:hover p{
+    color: #ffffff;
+} */
 
 .card:hover .card-hover{
     display: flex;
