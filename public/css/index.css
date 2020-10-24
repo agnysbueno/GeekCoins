@@ -375,7 +375,9 @@ main{
 .productname-collection {
     width: 70%;
     height: 100%;
-    background-color: purple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .productname-collection p {
