@@ -145,7 +145,7 @@ main{
 
 
 
-/**********Section Lançamentos**********/
+/************************************************* Section Lançamentos *************************************************/
 
 .slider-container{
     width: 100vw;
@@ -192,7 +192,7 @@ main{
     display:none;
 }
 
-/**********Section Mais Vendidos**********/
+/************************************************ Section Mais Vendidos************************************************/
 
 #section-bestsellers {
     display: flex;
@@ -283,18 +283,18 @@ main{
 }
 
 .card-hover{
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     width: 300px;
-    height: 200px;
+    height: 150px;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     background-color: white;
     z-index: 10;
     position: absolute;
     display: none;
-    animation: anim 2s forwards;
+    animation: anim 1.5s forwards;
 }
 
 .card-hover p{
@@ -305,15 +305,24 @@ main{
 }
 
 .card-hover #container-icons{
-    margin: 20px 20px 30px 0;
-    width: 90px;
-    align-self: flex-end;
+    margin-top: 10px;
+    width: 100%;
     height: 35px;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .card-hover #container-icons a{
-    width: 35px;
+    width: auto;
+    padding: 0 10px;
     height: 35px;
+    text-decoration: none;
+}
+
+.card-hover #container-icons p{
+    font-weight: 400;
+    margin-left: 10px;  
+    color: #FFD72F;
 }
 
 .card:hover .card-hover{
@@ -334,7 +343,7 @@ main{
 }
 
 
-/**********Section Coleções**********/
+/************************************************* Section Coleções **************************************************/
 
 #section-collections {
     display: flex;
