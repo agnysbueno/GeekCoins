@@ -433,20 +433,48 @@ main{
 
 .firstname-collection,
 .secondname-collection {
-    font-size: 48px;
+    height: 50px;
+    font-size: 44px;
     font-weight: 700;
     color: #C53838;
 }
 
+.name-collection {
+    width: 80%;
+    margin-top: 50px;
+}
+
+.secondname-collection {
+    padding-left: 50%;
+}
+
 .description-collection {
-    width: 90%;
+    width: 84%;
     height: 20%;
-    margin-bottom: 30px;
-    background-color: aqua;
+    margin-bottom: 50px;
 }
 
 .description-collection p {
     font-size: 20px;
     font-weight: 500;
     color: #ffffff;
+}
+
+footer {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    height: 30px;
+    width: 100wh;
+    /* background-color: #343434; */
+    color: black;
+}
+
+footer a {
+    text-decoration: none;
+    color: #343434;
+    height: 15px;
+}
+
+footer a:hover {
+    border-bottom: #FFD72F solid 2px;
 }
