@@ -13,13 +13,33 @@
 </head>
 <body>
 
-    
-    <form action="/src/repositories/products/searchProducts.php" method="GET">
-        <div id='search-container'>
-            <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="" id="icon-search"></button>
-            <input type="search" name="search" id="bar-search" placeholder="Pesquisar...">
-        </div>
-    </form>
+    <aside class="container-filters center">
 
+    </aside>
+
+    <main class="container-results center">
+        <div class="container-intern center">
+
+            <div id="container-search" class="center">
+                <form role="search" id="form-search" action="/src/repositories/products/searchProducts.php" method="GET">
+                    <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="ícone de lupa" id="icon-search"></button>
+                    <input type="search" incremental="incremental" name="search" id="bar-search" placeholder="Pesquisar...">                        
+                </form>
+            
+                <a href="#" id="anchor-login" class="cinza-escuro">Entre ou cadastre-se</a>
+                
+                <div id="container-icons">
+                    <a href="#" class="button-icons">
+                        <img src="../../public/assets/icons/favoritos.svg" alt="ícone de coração" id="icon-wishlist">
+                    </a>
+                    <a href="#" class="button-icons">
+                        <img src="../../public/assets/icons/sacola.svg" alt="ícone de sacola de compras" id="icon-shopping">
+                    </a>
+                </div>                        
+            </div>
+
+            
+        </div>
+    </main>
 </body>
 </html>

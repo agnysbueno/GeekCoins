@@ -61,89 +61,11 @@ main{
 
 #container-search{
     width: 68%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
 }
 
 #form-search{
     width: 56%;
-    height: 35px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    border-style: none;
-    padding-left: 15px;
-    display: flex;
-    align-items: center;
 }
-
-#button-search,
-#icon-search {
-    width: 18px;
-    height: 18px;
-}
-
-#button-search{
-    border-style: none;
-    background-color: #ffffff;
-    
-}
-#bar-search{
-    width: 94%;
-    height: 35px;
-    padding-left: 15px;
-    background-color: #ffffff;
-    border-style: none;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 8px;
-}
-
-#bar-search:-webkit-autofill{
-    /* Changing input search autocomplete background color to white */
-    -webkit-box-shadow: 0 0 0 30px #ffffff inset;
-    /* -webkit-text-fill-color: #343434 !important; */
-}
-
-#anchor-login{
-    text-decoration: none; 
-    font-weight: 500;
-    font-size: 18px;
-    transition: 0.2s;
-}
-
-#anchor-login:hover{
-    color: #777;
-}
-
-#container-icons{
-    width: 100px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.button-icons{
-    width: 35px;
-    height: 35px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.2s;
-}
-
-.button-icons:hover{
-    background-color: #333333;
-}
-
-#icon-wishlist,
-#icon-shopping{
-    width: 20px;
-}
-
-
 
 /************************************************* Section Lançamentos *************************************************/
 
@@ -431,6 +353,11 @@ main{
     align-items: center;
 }
 
+
+.container-title-collection {
+    width: 80%;   
+}
+
 .name-collection {
     font-weight: 700;
     color: #C53838;
@@ -438,18 +365,17 @@ main{
     font-size: 44px;
 }
 
-.container-title-collection {
-    width: 80%;
+
+#firstname-collection {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 50px;
 }
 
-.firstname-collection {
-    /* background-color: purple; */
-}
-
-.secondname-collection {
-    /* background-color: aqua; */
+#secondname-collection {
     display: flex;
     justify-content: flex-end;
+    font-size: 50px;
 }
 
 .description-collection {
