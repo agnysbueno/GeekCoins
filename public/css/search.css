@@ -29,7 +29,7 @@ body {
 
 #form-search,
 .delivery-ordination {
-    width: 68%;
+    width: 56%;
 }
 
 #bar-search {
@@ -43,7 +43,8 @@ body {
     align-items: center;
 }
 
-.delivery, .ordination {
+.delivery,
+.ordination {
     width: 44%;
     height: 40%;
     display: flex;
@@ -58,22 +59,26 @@ body {
 }
 
 .text-delivery span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: #000000;
-    line-height: 24px;
+    line-height: 20px;
 }
 
 .find-cep {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 400;
     color: #343434;
-    line-height: 19px;
+    line-height: 16px;
 }
 
 .form-cep {
     width: 50%;
 }
+
+.type-cep { 
+    width: 100%
+} 
 
 .type-cep,
 .select-ordination {
@@ -104,7 +109,7 @@ body {
 }
 
 .ordination span {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 500;
     color: #000000;
 }
