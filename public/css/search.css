@@ -6,7 +6,7 @@ body {
     min-height: 700px;
     height: auto;
     overflow: hidden;
-    background-color: green;
+    background-color: #ffffff;
     justify-self: start;
 }
 
@@ -21,13 +21,101 @@ body {
 .container-intern {
     width: 86%;
     height: 100vh;
-    background-color: purple;
 }
 
 #container-search{
     width: 100%;
 }
 
-#form-search{
+#form-search,
+.delivery-ordination {
     width: 68%;
 }
+
+#bar-search {
+    width: 96%;
+}
+
+.delivery-ordination {
+    height: 14%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.delivery, .ordination {
+    width: 44%;
+    height: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-delivery {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.text-delivery span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+    line-height: 24px;
+}
+
+.find-cep {
+    font-size: 14px;
+    font-weight: 400;
+    color: #343434;
+    line-height: 19px;
+    /* text-decoration: #343434; */
+}
+
+.form-cep {
+    width: 50%;
+}
+
+.type-cep,
+.select-ordination {
+    background-color: #FFD72F;
+    border-radius: 8px;
+    border: #FFD72F;
+    height: 30px;
+    padding-left: 16px;
+    font-weight: 500;
+    font-size: 15px;
+    color: #000;
+}
+
+.type-cep::placeholder {
+    color: #343434;
+}
+
+.type-cep:-webkit-autofill{
+    /* Changing input search autocomplete background color to yellow */
+    -webkit-box-shadow: 0 0 0 30px #FFD72F inset;
+}
+
+.form-ordination {
+    width: 60%;
+    cursor: pointer;
+    background-color: #FFD72F;
+    border-radius: 8px;
+}
+
+.ordination span {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000000;
+}
+
+.select-ordination {
+    cursor: pointer;
+    width: 96%;
+}
+
+.select-ordination option {
+    background-color: #ffffff;
+}
+

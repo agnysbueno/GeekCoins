@@ -38,7 +38,33 @@
                 </div>                        
             </div>
 
-            
+            <div class="delivery-ordination">
+                <div class="delivery">
+                    <div class="text-delivery">
+                        <span>Consultar frete:</span>
+                        <a class="find-cep" href="http://www.buscacep.correios.com.br/sistemas/buscacep/" target="_blank">Não sei meu CEP</a>                    
+                    </div>
+    
+                    <form action="" method="GET" class="form-cep">
+                        <label for="cep"></label>
+                        <input class="type-cep" type="text" name="cep" placeholder="00000-000">
+                    </form>
+                </div>
+                <div class="ordination">
+                    <span class="order-by">Ordenar por:</span>
+                    <form action="" method="GET" class="form-ordination">
+                        <label for="ordination"></label>
+                        <select name="ordination" id="ordination" class="select-ordination">
+                            <option value="price-asc">Menor preço</option>
+                            <option value="price-desc">Maior preço</option>
+                            <option value="rate-desc">Mais bem avaliados</option>
+                            <option value="bestsellers-desc" selected="selected">Mais vendidos</option>
+                            <option value="launch-desc">Lançamentos</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+
         </div>
     </main>
 </body>
