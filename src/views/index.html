@@ -10,6 +10,22 @@
         <link href="../../public/css/index.css" rel="stylesheet"/>
         <link href="../../public/css/palette.css" rel="stylesheet"/>
 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="http://jquery-textfill.github.io/js/textfill/jquery.textfill.js"></script>
+
+        <script>
+ 
+            $(document).ready(function() {
+                $('#firstname-collection').textfill({
+                    maxFontPixels: 50
+                });
+                $('#secondname-collection').textfill({
+                    maxFontPixels: 50
+                });
+            });
+ 
+         </script>
+
     </head>
     
     <body>
@@ -298,10 +314,24 @@
                                 </div>
                             </div>
                             <div class="collection-column-2">
+                                
+                                                                
                                 <div class="container-title-collection">
-                                    <h1 class="name-collection firstname-collection">Blood</h1>
-                                    <h1 class="name-collection secondname-collection">Label</h1>
+
+                                    <div class="name-collection" id="firstname-collection">
+                                        <span>
+                                            Blood
+                                        </span>
+                                    </div>
+                                    <div class="name-collection" id="secondname-collection">
+                                        <span>
+                                            Label
+                                        </span>
+                                    </div>
+
                                 </div>   
+
+
                                 <div class="description-collection">
                                     <p>Coleção inspirada no que tem de mais sangrento...</p>
                                 </div>

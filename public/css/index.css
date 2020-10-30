@@ -431,25 +431,28 @@ main{
     align-items: center;
 }
 
+
+.container-title-collection {
+    width: 80%;   
+}
+
 .name-collection {
-    height: 50px;
-    font-size: 44px;
+    width: 100%;
     font-weight: 700;
     color: #C53838;
 }
 
-.container-title-collection {
-    width: 80%;
+
+#firstname-collection {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 50px;
 }
 
-.firstname-collection {
-    /* background-color: purple; */
-}
-
-.secondname-collection {
-    /* background-color: aqua; */
+#secondname-collection {
     display: flex;
     justify-content: flex-end;
+    font-size: 50px;
 }
 
 .description-collection {
