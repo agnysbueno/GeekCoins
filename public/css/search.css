@@ -37,7 +37,7 @@ body {
 }
 
 .delivery-ordination {
-    height: 14%;
+    height: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -69,7 +69,6 @@ body {
     font-weight: 400;
     color: #343434;
     line-height: 19px;
-    /* text-decoration: #343434; */
 }
 
 .form-cep {
@@ -113,9 +112,15 @@ body {
 .select-ordination {
     cursor: pointer;
     width: 96%;
+    font-family: 'Baloo Da 2', cursive;
+    line-height: 20px;
 }
 
 .select-ordination option {
     background-color: #ffffff;
+}
+
+.select-ordination[selected="selected"] {
+    font-size: 500;
 }
 
