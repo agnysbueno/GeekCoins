@@ -20,7 +20,6 @@ body {
 
 .container-intern {
     width: 86%;
-    height: 100vh;
 }
 
 #container-search{
@@ -37,10 +36,10 @@ body {
 }
 
 .delivery-ordination {
-    height: 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 40px 0;
 }
 
 .delivery,
@@ -129,3 +128,12 @@ body {
     font-size: 500;
 }
 
+
+/***************/
+
+.results {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 50px;
+}

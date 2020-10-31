@@ -122,3 +122,119 @@ input[type="search"]::-webkit-search-cancel-button {
 #icon-shopping{
     width: 20px;
 }
+
+/**** CARDS PRODUTOS ****/
+
+.cards-page{
+    align-items: center;
+    min-height: 450px;
+    width: 85%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.hover-position{
+    overflow: hidden;
+    height: 300px;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.card a {
+    width: inherit;
+    height: 220px;
+    display: flex;
+    justify-content: center;
+}
+
+.card a img{
+    width: inherit;
+    height: auto;
+}
+
+.card-info {
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-info .title{
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.card-info .price{
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.card-hover{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    height: 150px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: white;
+    z-index: 10;
+    position: absolute;
+    display: none;
+    animation: anim 1.5s forwards;
+}
+
+.card-hover #text-hover{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #777;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.card-hover #container-icons{
+    margin-top: 10px;
+    width: 100%;
+    height: 35px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-hover #container-icons a{
+    width: auto;
+    padding: 0 10px;
+    height: 35px;
+    text-decoration: none;
+}
+
+.card-hover #container-icons p{
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 10px;  
+    color: #FFD72F;
+}
+
+.card:hover .card-hover{
+    display: flex;
+}
+
+@keyframes anim{
+    0%{
+        bottom: -200px;
+    }
+    100%{
+        bottom: 0;
+    }
+}
