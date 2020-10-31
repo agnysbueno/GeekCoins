@@ -14,7 +14,41 @@
 <body>
 
     <aside class="container-filters center">
+        <div class="logo">
+            <img src="../../public/assets/icons/logo-horizontal.svg" alt="Logotipo Geek Coins">
+        </div>
 
+        <div class="filters">
+        
+            <div class="total-results">
+                <span>43 Resultados</span>
+            </div>
+
+            <div class="division-line"></div>
+
+            <div class="budget">
+                <span>Preço</span>
+                <form action="" method="GET" class="budget-form">
+                    <label for="min-price"></label>
+                    <input type="text" name="min-price" class="budget-price" placeholder="R$ mín">
+                    <label for="max-price"></label>
+                    <input type="text" name="max-price" class="budget-price" placeholder="R$ máx">
+                </form>
+            </div>
+
+            <div class="division-line"></div>
+
+            <div class="categories">
+                <span>Produto</span>
+            </div>
+
+            <div class="division-line"></div>
+
+            <div class="collections">
+                <span>Coleção</span>
+            </div>
+
+        </div>
     </aside>
 
     <main class="container-results center">
@@ -250,6 +284,25 @@
 
                     </div>
                 </div>
+
+            </div>
+
+            <div class="results-navigation">
+
+                <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" onclick="plusCards(-1)">
+
+                <div class="slide-buttons">
+                    <span class="button-slide demo" onclick="currentDiv(1)"></span>
+                    <span class="button-slide demo" onclick="currentDiv(2)"></span>
+                    <span class="button-slide demo" onclick="currentDiv(3)"></span>
+                    <span class="button-slide demo" onclick="currentDiv(4)"></span>
+                    <span class="button-slide demo" onclick="currentDiv(5)"></span>
+                    <span class="button-slide demo" onclick="currentDiv(6)"></span>
+                    <span class="button-slide demo" onclick="currentDiv(7)"></span>
+                    <span class="button-slide demo" onclick="currentDiv(8)"></span>
+                </div>
+
+                <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusCards(+1)">
 
             </div>
         </div>

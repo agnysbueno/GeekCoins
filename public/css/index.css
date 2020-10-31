@@ -90,28 +90,14 @@ main{
 .slide-buttons {
     position: relative;
     bottom: 50px;
-    text-align: center!important;
-    font-size: 18px!important;
-}
-
-.button-slide:hover {
-    background-color: #000000;
-}
-
-.selected{
-    background-color:#000!important;
 }
 
 .button-slide {
     background-color: #F6EBBB;
-    display: inline-block;
-    text-align: center;
-    height: 10px;
-    width: 10px;
-    padding: 0;
-    margin: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+}
+
+.selected{
+    background-color:#000!important;
 }
 
 .mySlides {
@@ -130,12 +116,8 @@ main{
     min-height: 380px;
 }
 
-#section-bestsellers .icon-arrow,
-#section-collections .icon-arrow {
-    cursor: pointer;
-}
-
-#title-bestsellers, #title-collections {
+#title-bestsellers,
+#title-collections {
     font-size: 34px;
     margin-top: 50px;
     margin-bottom: 20px;

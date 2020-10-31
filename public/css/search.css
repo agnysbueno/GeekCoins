@@ -1,14 +1,6 @@
 body {
     display: flex;
 }
-.container-filters{
-    width: 15%;
-    min-height: 700px;
-    height: auto;
-    overflow: hidden;
-    background-color: #ffffff;
-    justify-self: start;
-}
 
 .container-results{
     width: 88%;
@@ -136,4 +128,118 @@ body {
     justify-content: space-between;
     width: 100%;
     margin-bottom: 50px;
+}
+
+.results-navigation {
+    width: 100%;
+    height: 22px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-arrow {
+    height: 18px;
+}
+
+.slide-buttons {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28%;   
+}
+
+.button-slide {
+    background-color: #b3b3b3;
+}
+
+.selected{
+    background-color:#e9bc00!important;
+}
+
+/************ aside ************/
+
+.container-filters{
+    width: 15%;
+    min-height: 700px;
+    height: auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    justify-self: start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.logo {
+    width: 70%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.filters {
+    width: 86%;
+    height: auto;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: purple; */
+} 
+
+.filters span {
+    font-weight: 500;
+    color: #000000;
+}
+
+.total-results {
+    width: 96%;
+}
+
+.total-results span {
+    font-size: 14px; 
+}
+
+.division-line {
+    height: 2px;
+    width: 100%;
+    background-color: #EAEAEA;
+}
+
+.budget, .categories, .collections {
+    margin-top: 6px;
+    width: 96%;
+    height: 140px;
+}
+
+.budget-form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.budget span {
+    font-size: 16px;
+}
+
+.budget-price {
+    background-color: #FFD72F;
+    border-radius: 8px;
+    border: #FFD72F;
+    width: 46%;
+    height: 30px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.budget-price::placeholder {
+    color: #343434;
 }
