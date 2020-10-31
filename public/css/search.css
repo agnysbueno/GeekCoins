@@ -220,9 +220,16 @@ body {
     height: 140px;
 }
 
+.budget, .categories, .collections {
+    height: auto;
+    overflow: hidden;
+    min-height: 80px;
+}
+
 .budget-form {
     display: flex;
     justify-content: space-between;
+    margin-top: 10px;
 }
 
 .budget span {
@@ -242,4 +249,77 @@ body {
 
 .budget-price::placeholder {
     color: #343434;
+}
+
+.categories {
+    background-color: aqua;
+}
+
+.checkbox-label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    clear: both;
+    margin-bottom: 10px;
+}
+
+.checkbox-label:hover .checkbox-custom {
+    background-color: #343434;
+    border: 2px solid #343434;
+    transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+
+.checkbox-label .name {
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 28px;
+    text-align: start;
+    height: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 16px;
+    width: 16px;
+    background-color: #FFD72F;
+    border-radius: 2px;
+    border: 2px solid #FFD72F;
+}
+
+.checkbox-label .checkbox-checked {
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    height: 8px;
+    width: 8px;
+    background-color: #343434;
+    border-radius: 2px;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    border: 2px solid #343434;
+    opacity: 0;
+}
+
+.checkbox-label input:checked ~ .checkbox-checked {
+    opacity: 1;
+    -webkit-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+    transform: rotate(0deg) scale(1);
 }
