@@ -265,7 +265,18 @@ body {
 
 .checkbox-label:hover .checkbox-custom {
     background-color: #343434;
-    border: 2px solid #343434;
+    border: 4px solid #FFD72F;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+}
+
+.checkbox-label:hover input:checked ~ .checkbox-custom {
+    background-color: #FFD72F;
+    border: 2px solid #FFD72F;
     transition: all 0.4s ease-out;
     -webkit-transition: all 0.4s ease-out;
     -moz-transition: all 0.4s ease-out;
@@ -323,3 +334,4 @@ body {
     -ms-transform: rotate(0deg) scale(1);
     transform: rotate(0deg) scale(1);
 }
+
