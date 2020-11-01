@@ -1,0 +1,38 @@
+header {
+    width: 88%;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+}
+
+#container-search {
+    width: 84%;
+}
+
+#form-search {
+    width: 56%;
+}
+
+#bar-search {
+    width: 96%;
+}
+
+main {
+    width: 88%;
+    min-height: 700px;
+    height: auto;
+    overflow: hidden;
+    background-color: purple;
+    display: flex;
+    justify-content: space-between;
+}
