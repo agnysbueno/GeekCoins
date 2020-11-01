@@ -136,21 +136,24 @@ body {
     margin-bottom: 50px;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .icon-arrow {
-    height: 18px;
+    height: 10px;
 }
 
 .slide-buttons {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 28%;   
+    width: 220px; 
 }
 
 .button-slide {
     background-color: #b3b3b3;
+    width: 6px;
+    height: 6px;
 }
 
 .selected{
@@ -220,24 +223,20 @@ body {
     min-height: 80px;
 }
 
-.budget-form {
-    display: flex;
-    justify-content: space-between;
-}
-
 .budget-price {
-    background-color: #FFD72F;
+    background-color:rgba(255, 215, 47, 0.7);
     border-radius: 8px;
-    border: #FFD72F;
-    width: 46%;
-    height: 30px;
+    border: rgba(255, 215, 47, 0.7);
+    width: 72px;
+    height: 28px;
     text-align: center;
-    font-weight: 500;
-    font-size: 15px;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 3px;
 }
 
 .budget-price::placeholder {
-    color: #343434;
+    color: #777777;
 }
 
 #checkboxes-products {
