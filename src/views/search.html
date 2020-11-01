@@ -27,7 +27,7 @@
             <div class="division-line"></div>
 
             <div class="budget">
-                <span>Preço</span>
+                <p class="filter-title">Preço</p>
                 <form action="" method="GET" class="budget-form">
                     <label for="min-price"></label>
                     <input type="text" name="min-price" class="budget-price" placeholder="R$ mín">
@@ -39,66 +39,106 @@
             <div class="division-line"></div>
 
             <div class="categories">
-                <span>Produto</span>
+                <p class="filter-title">Produto</p>
+                
+                <div id="checkboxes-products">
+                    <label class="checkbox-label" for="all-products">
+                        <input type="checkbox" id="all-products" name="all-products" value="all">
+                        <span class="checkbox-product-custom">
+                            <span class="name-option">Todos</span>
+                        </span>
+                    </label>
+    
+                    <label class="checkbox-label" for="caneca">
+                        <input type="checkbox" id="caneca" name="caneca" value="caneca">
+                        <span class="checkbox-product-custom">
+                            <span class="name-option">Caneca</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-label" for="quadro">
+                        <input type="checkbox" id="quadro" name="quadro" value="quadro">
+                        <span class="checkbox-product-custom">
+                            <span class="name-option">Quadro</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-label" for="camiseta">
+                        <input type="checkbox" id="camiseta" name="camiseta" value="camiseta">
+                        <span class="checkbox-product-custom">
+                            <span class="name-option">Camiseta</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-label" for="mousepad">
+                        <input type="checkbox" id="mousepad" name="mousepad" value="mousepad">
+                        <span class="checkbox-product-custom">
+                            <span class="name-option">Mousepad</span>
+                        </span>
+                    </label>
+
+                    <label class="checkbox-label" for="capinha">
+                        <input type="checkbox" id="capinha" name="capinha" value="capinha">
+                        <span class="checkbox-product-custom">
+                            <span class="name-option">Capinha</span>
+                        </span>
+                    </label>
+                </div>
                 
             </div>
 
             <div class="division-line"></div>
 
             <div class="collections">
-                <span>Coleção</span>
-                <div class="collections">
-                   
-                    <label class="checkbox-label" for="all">
-                        <p class="name">Todas</p>
-                        <input type="checkbox" id="all" name="all" value="all">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-checked"></span>
-                    </label>
-                    
-                    <label class="checkbox-label" for="blood-label"> 
-                        <p class="name">Blood Label</p>
-                        <input type="checkbox" id="blood-label" name="blood-label" value="bloodlabel">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-checked"></span>
-                    </label>
-                    
-                    <label class="checkbox-label" for="tv2home"> 
-                        <p class="name">TV 2 HOME</p>
-                        <input type="checkbox" id="tv2home" name="tv2home" value="tv2home">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-checked"></span>                   
-                    </label>
-                    
-                    <label class="checkbox-label" for="bestenemies4ever"> 
-                        <p class="name">BestEnemies4ever</p>
-                        <input type="checkbox" id="bestenemies4ever" name="bestenemies4ever" value="bestenemies4ever">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-checked"></span>                   
-                    </label>
-                    
-                    <label class="checkbox-label" for="lol"> 
-                        <p class="name">Work of Legends</p>
-                        <input type="checkbox" id="lol" name="lol" value="lol">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-checked"></span>                   
-                    </label>
-                    
-                    <label class="checkbox-label" for="bleach"> 
-                        <p class="name">Bleach Coffee</p>
-                        <input type="checkbox" id="bleach" name="bleach" value="bleach">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-checked"></span>                   
-                    </label>
-                    
-                    <label class="checkbox-label" for="naruto"> 
-                        <p class="name">Total Naruto</p>
-                        <input type="checkbox" id="naruto" name="naruto" value="naruto">
-                        <span class="checkbox-custom"></span>
-                        <span class="checkbox-checked"></span>                   
-                    </label>  
+                <p class="filter-title">Coleção</p> 
+                <label class="checkbox-label" for="all-collections">
+                    <p class="name">Todas</p>
+                    <input type="checkbox" id="all-collections" name="all-collections" value="all">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-checked"></span>
+                </label>
                 
-                </div>
+                <label class="checkbox-label" for="blood-label"> 
+                    <p class="name">Blood Label</p>
+                    <input type="checkbox" id="blood-label" name="blood-label" value="bloodlabel">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-checked"></span>
+                </label>
+                
+                <label class="checkbox-label" for="tv2home"> 
+                    <p class="name">TV 2 HOME</p>
+                    <input type="checkbox" id="tv2home" name="tv2home" value="tv2home">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-checked"></span>                   
+                </label>
+                
+                <label class="checkbox-label" for="bestenemies4ever"> 
+                    <p class="name">BestEnemies4ever</p>
+                    <input type="checkbox" id="bestenemies4ever" name="bestenemies4ever" value="bestenemies4ever">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-checked"></span>                   
+                </label>
+                
+                <label class="checkbox-label" for="lol"> 
+                    <p class="name">Work of Legends</p>
+                    <input type="checkbox" id="lol" name="lol" value="lol">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-checked"></span>                   
+                </label>
+                
+                <label class="checkbox-label" for="bleach"> 
+                    <p class="name">Bleach Coffee</p>
+                    <input type="checkbox" id="bleach" name="bleach" value="bleach">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-checked"></span>                   
+                </label>
+                
+                <label class="checkbox-label" for="naruto"> 
+                    <p class="name">Total Naruto</p>
+                    <input type="checkbox" id="naruto" name="naruto" value="naruto">
+                    <span class="checkbox-custom"></span>
+                    <span class="checkbox-checked"></span>                   
+                </label> 
             </div>
 
         </div>

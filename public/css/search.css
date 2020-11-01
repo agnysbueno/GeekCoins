@@ -192,20 +192,17 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* background-color: purple; */
 } 
-
-.filters span {
-    font-weight: 500;
-    color: #000000;
-}
 
 .total-results {
     width: 96%;
 }
 
-.total-results span {
-    font-size: 14px; 
+.filter-title {
+    font-weight: 500;
+    color: #000000;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .division-line {
@@ -218,9 +215,6 @@ body {
     margin-top: 6px;
     width: 96%;
     height: 140px;
-}
-
-.budget, .categories, .collections {
     height: auto;
     overflow: hidden;
     min-height: 80px;
@@ -229,11 +223,6 @@ body {
 .budget-form {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
-}
-
-.budget span {
-    font-size: 16px;
 }
 
 .budget-price {
@@ -251,8 +240,12 @@ body {
     color: #343434;
 }
 
-.categories {
-    background-color: aqua;
+#checkboxes-products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .checkbox-label {
@@ -263,10 +256,28 @@ body {
     margin-bottom: 10px;
 }
 
-.checkbox-label:hover .checkbox-custom {
-    background-color: #343434;
-    border: 4px solid #FFD72F;
-    border-radius: 4px;
+.checkbox-label input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-label .checkbox-product-custom {
+    height: 30px;
+    width: 80px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 16px;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox-label:hover .checkbox-product-custom,
+.checkbox-label input:checked ~ .checkbox-product-custom {
+    background-color: #FFD72F;
+    border: 1px solid #FFD72F;
     transition: all 0.2s ease-out;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
@@ -274,14 +285,10 @@ body {
     -o-transition: all 0.2s ease-out;
 }
 
-.checkbox-label:hover input:checked ~ .checkbox-custom {
-    background-color: #FFD72F;
-    border: 2px solid #FFD72F;
-    transition: all 0.4s ease-out;
-    -webkit-transition: all 0.4s ease-out;
-    -moz-transition: all 0.4s ease-out;
-    -ms-transition: all 0.4s ease-out;
-    -o-transition: all 0.4s ease-out;
+.checkbox-label .name-option {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
 }
 
 .checkbox-label .name {
@@ -292,12 +299,6 @@ body {
     height: 18px;
     display: flex;
     align-items: center;
-}
-
-.checkbox-label input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
 }
 
 .checkbox-label .checkbox-custom {
@@ -328,10 +329,31 @@ body {
     opacity: 0;
 }
 
+
+.checkbox-label:hover .checkbox-custom {
+    background-color: #343434;
+    border: 4px solid #FFD72F;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -ms-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+}
+
+.checkbox-label:hover input:checked ~ .checkbox-custom {
+    background-color: #FFD72F;
+    border: 2px solid #FFD72F;
+    transition: all 0.4s ease-out;
+    -webkit-transition: all 0.4s ease-out;
+    -moz-transition: all 0.4s ease-out;
+    -ms-transition: all 0.4s ease-out;
+    -o-transition: all 0.4s ease-out;
+}
+
 .checkbox-label input:checked ~ .checkbox-checked {
     opacity: 1;
     -webkit-transform: rotate(0deg) scale(1);
     -ms-transform: rotate(0deg) scale(1);
     transform: rotate(0deg) scale(1);
 }
-
