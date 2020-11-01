@@ -225,23 +225,22 @@ main{
 }
 
 .name-collection {
+    font-family: 'Baloo Da 2', cursive;
     font-weight: 700;
     color: #C53838;
     height: 50px;
-    font-size: 44px;
 }
-
 
 #firstname-collection {
     display: flex;
     justify-content: flex-start;
-    font-size: 50px;
+    font-size: 44px;
 }
 
 #secondname-collection {
     display: flex;
     justify-content: flex-end;
-    font-size: 50px;
+    font-size: 44px;
 }
 
 .description-collection {
@@ -261,7 +260,6 @@ footer {
     margin-bottom: 30px;
     height: 30px;
     width: 100wh;
-    /* background-color: #343434; */
     color: black;
 }
 
