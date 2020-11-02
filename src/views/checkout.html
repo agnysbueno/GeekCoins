@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geek Coins - Checkout</title>
+    <title>Geek Coins - Pagamento</title>
 
     <link href="../../public/css/global.css" rel="stylesheet"/>
     <link href="../../public/css/checkout.css" rel="stylesheet"/>
@@ -40,7 +40,84 @@
         </header>
         
         <main class="center">
+            <div id="page-title">
+                <h1 class="cinza-escuro">Finalizar compra</h1>
+            </div>
 
+            <div id="container-form">
+                <div id="form-register">
+                    <div id="personal-data" class="register">
+                        <div class="form-register-title">
+                            <img class="icon" src="../../public/assets/icons/pessoa.svg" alt="ícone de usuário">
+                            <p class="cinza-medio">Dados Pessoais</p>
+                            <img class="arrow" src="../../public/assets/icons/angle-up-solid.svg" alt="Recolher">
+                        </div>
+                        <form id="data-info" class="register-info" action="" method="POST">
+                            <label for="nome">
+                                <input type="name" name="nome" size="30" placeholder="Seu nome completo">
+                            </label>
+
+                            <label for="email">
+                                <input type="email" name="email" placeholder="nome@mail.com">
+                            </label>
+                                
+                            <label for="telefone">
+                                <input type="text" name="telefone" placeholder="(XX) 0000-0000">
+                            </label>
+                        </form>
+                    </div>
+                    
+                    <div id="address" class="register">
+                        <div class="form-register-title">
+                            <img id="truck" src="../../public/assets/icons/entrega.svg" alt="ícone de caminhão">
+                            <p class="cinza-medio">Entrega</p>
+                            <img class="arrow" src="../../public/assets/icons/angle-up-solid.svg" alt="Recolher">
+                        </div>
+
+                        <form id="delivery-info" class="register-info" action="" method="POST">
+                            <label for="logradouro">
+                                <input type="text" name="logradouro" size="20" placeholder="Rua">
+                            </label>
+                            
+                            <label for="numero">
+                                <input type="text" name="numero" size="18" placeholder="Número">
+                            </label>
+                            
+                            <label for="complemento">
+                                <input type="text" name="complemento" size="18" placeholder="Complemento">
+                            </label>
+                            
+                            <label for="bairro">
+                                <input type="text" name="bairro" size="20" placeholder="Bairro">
+                            </label>
+                            
+                            <label for="cidade">
+                                <input type="text" name="cidade" size="18" placeholder="Cidade">
+                            </label>
+        
+                            <label for="estado">
+                                <input type="text" name="estado" size="18" placeholder="Estado">
+                            </label>
+        
+                            <label for="cep">
+                                <input type="text" name="cep" placeholder="CEP">
+                            </label>
+                        </form>
+                    </div>
+                </div>
+ 
+    
+                <div id="payment">
+                    <div class="form-register-title">
+                        <img id="wallet" src="../../public/assets/icons/carteira-amarela.svg" alt="ícone de carteira">
+                        <p class="cinza-escuro">Pagamento</p>
+                        <img class="arrow" src="../../public/assets/icons/angle-up-solid.svg" alt="Recolher">
+                    </div>
+           
+                </div> 
+
+            </div>
+            
         </main>
 
     </div>
