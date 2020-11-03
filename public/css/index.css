@@ -138,7 +138,7 @@ main{
 }
 
 .myCards {
-    display:none;
+    display: none;
 }
 
 
@@ -173,12 +173,17 @@ main{
 }
 
 .image-collection {
+    overflow: hidden;
+    background-color: white;
     width: 100%;
     height: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .image-collection img {
-    width: 100%;
+    width: auto;
     height: 100%;
 }
 
@@ -231,6 +236,10 @@ main{
     height: 50px;
 }
 
+.name-collection.tv {
+    color: #FFD72F;
+}
+
 #firstname-collection {
     display: flex;
     justify-content: flex-start;
@@ -254,6 +263,12 @@ main{
     color: #ffffff;
     text-align: center;
 }
+
+/* .myCollection {
+    display: none;
+} */
+
+/************************************************* Footer **************************************************/
 
 footer {
     margin-top: 100px;

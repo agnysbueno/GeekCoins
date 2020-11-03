@@ -1,5 +1,5 @@
-/************************* slider releases ******************************/
-
+/************************* releases ******************************/
+/* slider */
 var slideIndex = 1;
 
 showDivs(slideIndex);
@@ -16,8 +16,8 @@ function currentDiv(n) {
 }
 
 function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
+    let i;
+    let x = document.getElementsByClassName("mySlides");
     var dots = document.getElementsByClassName("demo");
 
     if (n > x.length) {slideIndex = 1}
@@ -46,19 +46,18 @@ function slider(){
 }
 
 
-/************************* slider bestsellers ******************************/
-
+/************************* bestsellers ******************************/
+/* slider */
 var slideCards = 1;
 showCards(slideCards);
 
 function plusCards(n) {
   showCards(slideCards += n);
-  console.log(n);
 }
 
 function showCards(n) {
-  var i;
-  var x = document.getElementsByClassName("myCards");
+  let i;
+  let x = document.getElementsByClassName("myCards");
   if (n > x.length) {slideCards = 1}
   if (n < 1) {slideCards = x.length} ;
   for (i = 0; i < x.length; i++) {
@@ -68,7 +67,7 @@ function showCards(n) {
   x[slideCards-1].style.display = "flex";
 }
 
-
+/* buttons */
 function mudaCoracaoParaBranco(){
   document.getElementById("icon-wishlist").src = "../../public/assets/icons/favoritos-branco.svg"
 }
@@ -76,3 +75,28 @@ function mudaCoracaoParaBranco(){
 function mudaSacolaParaBranco(){
   document.getElementById("icon-shopping").src = "../../public/assets/icons/sacola-branco.svg"
 }
+
+
+/************************* collections ******************************/
+/* slider */
+var slideCollection = 1;
+showCollection(slideCollection);
+
+function plusCollection(m) {
+  showCollection(slideCollection += m);
+  console.log(m);
+}
+
+function showCollection(m) {
+  let a;
+  let y = document.getElementsByClassName("myCollection");
+  if (m > y.length) {slideCollection = 1}
+  if (m < 1) {slideCollection = y.length} ;
+  for (a = 0; a < y.length; a++) {
+    y[a].style.display = "none";
+  }
+
+  y[slideCollection-1].style.display = "flex";
+}
+
+
