@@ -132,35 +132,83 @@
 
                     <div id="payment-type">
                         <div id="buttons">
-                            <button id="boleto" class="options">
+                            <button id="boleto" class="options" onclick="currentDiv(1)">
                                 <img src="../../public/assets/icons/boleto.svg" alt="Pagar com boleto">
                                 <p class="text cinza-medio">Boleto</p>
                             </button>
-                            <button class="options">
+                            <button class="options" onclick="currentDiv(2)">
                                 <img src="../../public/assets/icons/cartao.svg" alt="Pagar com boleto">
                                 <p class="text cinza-medio">Cartão</p>
                             </button>
-                            <button class="options">
+                            <button class="options" onclick="currentDiv(3)">
                                 <img src="../../public/assets/icons/dinheiro-geek.svg" alt="Pagar com boleto">
                                 <p class="text cinza-medio">Cupom</p>
                             </button>
                         </div>
-    
-                        <div id="description-boleto" class="description">
-                            <p class="text cinza-medio">O boleto bancário será enviado via e-mail 
-                                após a confirmação da compra, e poderá ser 
-                                pago em qualquer banco até o vencimento.
-                            </p>
 
-                            <div id="total">
-                                <p class="cinza-escuro">valor total:</p>
-                                <p class="laranja-escuro">R$ 93,78</p>
+                        <div class="description">
+                            <div id="description-boleto" class="myCheckout">
+                                <p class="text cinza-medio">O boleto bancário será enviado por e-mail 
+                                    após a confirmação da compra, e poderá ser 
+                                    pago em qualquer banco até a data de vencimento.
+                                </p>
+    
+                                <div id="total">
+                                    <p class="cinza-escuro">valor total:</p>
+                                    <p class="laranja-escuro">R$ 93,78</p>
+                                </div>
+    
+                                <button>
+                                    <p>Finalizar compra</p>
+                                </button>
+                            </div>
+                            
+                            <div id="description-cartao" class="myCheckout">
+                                <div id="creditcard-info">
+                                    <input type="number" size= "4" placeholder="Agência">
+                                    <input type="number" size= "10" placeholder="Conta">
+                                    <input type="number" size="1" placeholder="Dígito">    
+                                </div>
+                                
+                                <div id="card-type">
+                                    <div class="radio-option">
+                                        <input type="radio" id="credit" name="card-type" value="credit">
+                                        <label class="radio-label" for="credit">Cartão de crédito</label>   
+                                    </div>
+                                    
+                                    <div class="radio-option">
+                                        <input type="radio" id="debit" name="card-type" value="debit">
+                                        <label class="radio-label" for="debit">Cartão de débito</label>
+                                    </div>
+                                </div>
+
+                                <div id="total">
+                                    <p class="cinza-escuro">valor total:</p>
+                                    <p class="laranja-escuro">R$ 93,78</p>
+                                </div>
+    
+                                <button>
+                                    <p>Finalizar compra</p>
+                                </button>
                             </div>
 
-                            <button>
-                                <p>Finalizar compra</p>
-                            </button>
+                            <div id="description-cupom" class="myCheckout">
+                                <input type="text" placeholder="Digite o código do cupom">
+
+                                <p class="text cinza-medio">Cada cupom pode ser usado apenas uma única vez por CPF.
+                                </p>
+                                
+                                <div id="total">
+                                    <p class="cinza-escuro">desconto:</p>
+                                    <p class="laranja-escuro">R$ 10,00</p>
+                                </div>
+    
+                                <button>
+                                    <p>Finalizar compra</p>
+                                </button>
+                            </div>
                         </div>
+                        
                     </div>
                     
                 </div>
@@ -168,6 +216,21 @@
             </div>
 
             <div id="column-2">
+                <div id="resume">
+                    <div id="values" class="resume-values">
+                        <p class="cinza-medio">subtotal</p>
+                        <p class="cinza-medio">frete</p>
+                        <p class="cinza-medio">descontos</p>
+                        <p class="cinza-escuro main">total</p>
+                    </div>
+                    <div id="prices" class="resume-values">
+                        <p class="cinza-medio">R$ 76,99</p>
+                        <p class="cinza-medio">R$ 16,79</p>
+                        <p class="cinza-medio">R$ 0,00</p>
+                        <p class="laranja-escuro main">R$ 93,78</p>
+                    </div>
+                </div>
+                
                 
             </div>
                         
@@ -175,5 +238,7 @@
 
     </div>
 
+    <!--SCRIPTS JS-->
+    <script src="../../public/scripts/checkout.js"></script>
 </body>
 </html>

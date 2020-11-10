@@ -64,7 +64,7 @@ main {
     height: auto;
     min-height: 400px;
     overflow: hidden;
-    background-color: yellow;
+    /* background-color: yellow; */
 }
 
 #container-form {
@@ -178,9 +178,19 @@ main {
 
 #payment .description {
     width: 500px;
+    height: 210px;
+}
+
+#payment .myCheckout {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.myCheckout {
+    display: none;
 }
 
 #payment-type #buttons .options {
@@ -194,14 +204,15 @@ main {
     border-radius: 12px;
     border-color: transparent;
     cursor: pointer;
+    transition: 0.2s;
 }
 
-#payment-type #buttons .options:hover {
+#payment-type #buttons .options:hover, .selected {
     background-image: linear-gradient(to right, rgba(255, 215, 47, 1), rgba(255, 215, 47, 0));
     border: none;
 }
 
-#payment-type #buttons .options:hover .text {
+#payment-type #buttons .options:hover .text, .selected .text {
     color: #343434;
 }
 
@@ -215,13 +226,13 @@ main {
     width: 30px;
 }
 
-#payment-type .description .text {
+#payment-type #description-boleto .text {
     font-size: 18px;
     font-weight: 500;
 }
 
 #payment-type .description #total {
-    width: 40%;
+    width: 44%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -238,7 +249,17 @@ main {
     background-color: #FFD72F;
     border-radius: 8px;
     border-color: transparent;
-    width: 40%;
+    width: 44%;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+#payment-type .description button:hover {
+    background-color: #343434;
+}
+
+#payment-type .description button:hover p{
+    color: #FFD72F;
 }
 
 #payment-type .description button p{
@@ -246,10 +267,66 @@ main {
     font-weight: 500;
 }
 
-#payment-type #description-boleto {
-    opacity: 0;
+#payment-type #description-cupom input {
+    width: 48%;
+    height: 50px;
+    padding: 12px;
+    border-radius: 8px;
+    border-color: transparent;
+    font-size: 16px;
 }
 
-#payment-type #buttons #boleto:hover #description-boleto {
-    opacity: 1;
+#payment-type #description-cartao #creditcard-info,
+#payment-type #description-cartao #card-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#payment-type #description-cartao #creditcard-info input {
+    width: 30%;
+    height: 30px;
+    padding: 12px;
+    border-radius: 8px;
+    border-color: transparent;
+    font-size: 16px;
+}
+
+#payment-type #description-cartao #card-type .radio-option {
+    width: 250px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#payment-type #description-cartao #card-type .radio-label {
+    margin-left: 12px;
+}
+
+/******************/
+
+#column-2 #resume {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#column-2 #resume .resume-values {
+    width: 46%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#column-2 #resume .resume-values p {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#column-2 #resume .resume-values .main {
+    font-size: 24px;
+}
+
+#values {
+    align-items: flex-end;
 }
