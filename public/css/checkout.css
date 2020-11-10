@@ -152,13 +152,10 @@ main {
 #delivery-info {
     height: 100px;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
-}
-
-#delivery-info table {
-    width: 50px;
-    background-color: green;
-    border-color: black;
+    justify-content: space-between;
 }
 
 #payment-type {
@@ -284,12 +281,23 @@ main {
 }
 
 #payment-type #description-cartao #creditcard-info input {
-    width: 30%;
-    height: 30px;
-    padding: 12px;
+    height: 40px;
+    padding: 20px;
     border-radius: 8px;
     border-color: transparent;
     font-size: 16px;
+}
+
+#description-cartao #cartao {
+    width: 190px;
+}
+
+#description-cartao #validade {
+    width: 190px;
+}
+
+#description-cartao #cvv{
+    width: 90px;
 }
 
 #payment-type #description-cartao #card-type .radio-option {

@@ -76,49 +76,35 @@
                         </div>
 
                         <form id="delivery-info" class="register-info" action="" method="POST">
-                            <table border="1">
-                                <tr>
-                                    <td width="33%">
-                                        <label for="logradouro">
-                                            <input type="text" name="logradouro" placeholder="Rua">
-                                        </label>
-                                    </td>
-                                    <td width="33%">
-                                        <label for="numero">
-                                            <input type="text" name="numero" placeholder="Número">
-                                        </label>
-                                    </td>
-                                    <td width="33%">
-                                        <label for="complemento">
-                                            <input type="text" name="complemento" placeholder="Complemento">
-                                        </label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td width="33%">
-                                        <label for="bairro">
-                                            <input type="text" name="bairro" placeholder="Bairro">
-                                        </label>
-                                    </td>
-                                    <td width="33%">
-                                        <label for="cidade">
-                                            <input type="text" name="cidade" placeholder="Cidade">
-                                        </label>
-                                    </td>
-                                    <td width="33%">
-                                        <label for="estado">
-                                            <input type="text" name="estado" placeholder="Estado">
-                                        </label>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td colspan="3">
-                                        <label for="cep">
-                                            <input type="text" name="cep" placeholder="CEP">
-                                        </label>
-                                    </td>
-                                </tr>
-                            </table>                   
+                    
+                            <label for="logradouro">
+                                <input type="text" name="logradouro" size="7" placeholder="Rua">
+                            </label>
+                        
+                            <label for="numero">
+                                <input type="text" name="numero" size="7" placeholder="Número">
+                            </label>
+                        
+                            <label for="complemento">
+                                <input type="text" name="complemento" size="10" placeholder="Complemento">
+                            </label>
+                                    
+                            <label for="bairro">
+                                <input type="text" name="bairro" size="7" placeholder="Bairro">
+                            </label>
+                        
+                            <label for="cidade">
+                                <input type="text" name="cidade" size="7" placeholder="Cidade">
+                            </label>
+                                    
+                            <label for="estado">
+                                <input type="text" name="estado" size="10" placeholder="Estado">
+                            </label>
+                                     
+                            <label for="cep">
+                                <input type="text" name="cep" size="7" placeholder="CEP">
+                            </label>
+                                                  
                         </form>
                     </div>
                 </div>
@@ -165,9 +151,9 @@
                             
                             <div id="description-cartao" class="myCheckout">
                                 <div id="creditcard-info">
-                                    <input type="number" size= "4" placeholder="Agência">
-                                    <input type="number" size= "10" placeholder="Conta">
-                                    <input type="number" size="1" placeholder="Dígito">    
+                                    <input id="cartao" type="number" size= "16" placeholder="Número do cartão">
+                                    <input id="validade" type="number" size= "5" placeholder="Data de validade">
+                                    <input id="cvv" type="number" size="4" placeholder="CVV">    
                                 </div>
                                 
                                 <div id="card-type">
