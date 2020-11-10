@@ -35,11 +35,11 @@ main {
     height: auto;
     overflow: hidden;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 }
 
 #page-title {
-    width: 100%;
+    width: 88%;
     height: 100px;
     display: flex;
     justify-content: start;
@@ -51,22 +51,30 @@ main {
     font-weight: 500;
 }
 
-#container-form {
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-#form-register {
-    width: 48%;
+#column-1 {
+    width: 750px;
+    height: 480px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
+#column-2 {
+    width: 400px;
+    height: auto;
+    min-height: 400px;
+    overflow: hidden;
+    background-color: yellow;
+}
+
+#container-form {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .register {
-    height: 46%;
+    width: 48%;
     border: 2px solid #c3c3c3;
     box-sizing: border-box;
     border-radius: 8px;
@@ -75,7 +83,7 @@ main {
 
 .form-register-title {
     width: 100%;
-    height: 30px;
+    height: 26px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -83,7 +91,7 @@ main {
 }
 
 .form-register-title .icon {
-    width: 18px;
+    width: 14px;
 }
 
 .form-register-title .arrow {
@@ -91,13 +99,21 @@ main {
 }
 
 .form-register-title p {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    width: 88%;
+    width: 86%;
+}
+
+.form-register-title #title {
+    font-size: 22px;
+    font-weight: 500;
+    width: 92%;
+    display: flex;
+    align-items: center;
 }
 
 #payment {
-    width: 48%;
+    height: 300px;
     border: 2px solid #c3c3c3;
     box-sizing: border-box;
     border-radius: 8px;
@@ -105,22 +121,19 @@ main {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
 }
 
-.form-register-title #wallet,
 .form-register-title #truck {
+    width: 20px;
+}
+
+.form-register-title #wallet {
     width: 22px;
 }
 
 
 /***************/
-#data-info {
-    height: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-}
 
 .register-info input{
     border: none;
@@ -128,9 +141,40 @@ main {
     font-size: 16px;
 }
 
+#data-info {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
 #delivery-info {
-    height: 120px;
+    height: 100px;
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+}
+
+#delivery-info table {
+    width: 50px;
+    background-color: green;
+    border-color: black;
+}
+
+#payment-type {
+    width: 100%;
+    height: 220px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#payment #buttons  {
+    width: 200px;
+    background-color: orchid;
+}
+
+#payment #description {
+    width: 500px;
+    background-color: orange;
 }

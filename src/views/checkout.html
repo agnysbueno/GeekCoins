@@ -38,14 +38,15 @@
                 </div>                        
             </div>
         </header>
-        
-        <main class="center">
-            <div id="page-title">
-                <h1 class="cinza-escuro">Finalizar compra</h1>
-            </div>
 
-            <div id="container-form">
-                <div id="form-register">
+        <div id="page-title" class="center">
+            <h1 class="cinza-escuro">Finalizar compra</h1>
+        </div>
+
+        <main class="center">
+            
+            <div id="column-1">
+                <div id="container-form">
                     <div id="personal-data" class="register">
                         <div class="form-register-title">
                             <img class="icon" src="../../public/assets/icons/pessoa.svg" alt="ícone de usuário">
@@ -75,49 +76,78 @@
                         </div>
 
                         <form id="delivery-info" class="register-info" action="" method="POST">
-                            <label for="logradouro">
-                                <input type="text" name="logradouro" size="20" placeholder="Rua">
-                            </label>
-                            
-                            <label for="numero">
-                                <input type="text" name="numero" size="18" placeholder="Número">
-                            </label>
-                            
-                            <label for="complemento">
-                                <input type="text" name="complemento" size="18" placeholder="Complemento">
-                            </label>
-                            
-                            <label for="bairro">
-                                <input type="text" name="bairro" size="20" placeholder="Bairro">
-                            </label>
-                            
-                            <label for="cidade">
-                                <input type="text" name="cidade" size="18" placeholder="Cidade">
-                            </label>
-        
-                            <label for="estado">
-                                <input type="text" name="estado" size="18" placeholder="Estado">
-                            </label>
-        
-                            <label for="cep">
-                                <input type="text" name="cep" placeholder="CEP">
-                            </label>
+                            <table border="1">
+                                <tr>
+                                    <td width="33%">
+                                        <label for="logradouro">
+                                            <input type="text" name="logradouro" placeholder="Rua">
+                                        </label>
+                                    </td>
+                                    <td width="33%">
+                                        <label for="numero">
+                                            <input type="text" name="numero" placeholder="Número">
+                                        </label>
+                                    </td>
+                                    <td width="33%">
+                                        <label for="complemento">
+                                            <input type="text" name="complemento" placeholder="Complemento">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td width="33%">
+                                        <label for="bairro">
+                                            <input type="text" name="bairro" placeholder="Bairro">
+                                        </label>
+                                    </td>
+                                    <td width="33%">
+                                        <label for="cidade">
+                                            <input type="text" name="cidade" placeholder="Cidade">
+                                        </label>
+                                    </td>
+                                    <td width="33%">
+                                        <label for="estado">
+                                            <input type="text" name="estado" placeholder="Estado">
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="3">
+                                        <label for="cep">
+                                            <input type="text" name="cep" placeholder="CEP">
+                                        </label>
+                                    </td>
+                                </tr>
+                            </table>                   
                         </form>
                     </div>
                 </div>
- 
-    
+
                 <div id="payment">
                     <div class="form-register-title">
                         <img id="wallet" src="../../public/assets/icons/carteira-amarela.svg" alt="ícone de carteira">
-                        <p class="cinza-escuro">Pagamento</p>
+                        <p id="title" class="cinza-escuro">Pagamento</p>
                         <img class="arrow" src="../../public/assets/icons/angle-up-solid.svg" alt="Recolher">
                     </div>
-           
-                </div> 
 
+                    <div id="payment-type">
+                        <div id="buttons">
+                            
+                        </div>
+    
+                        <div id="description">
+    
+                        </div>
+                    </div>
+                    
+                </div>
+                
             </div>
-            
+
+            <div id="column-2">
+                
+            </div>
+                        
         </main>
 
     </div>
