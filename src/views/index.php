@@ -259,7 +259,7 @@ $conexao = conexaoMysql();
                         <img class="icon-arrow" src="../../public/assets/icons/ir-slider.svg" alt="avancar" onclick="return plusCollection(+1)">
                     </div>
                 </section>
-
+                
                 <footer> Todos os direitos reservados - <a href="#">Geek Coins</a> 2020</footer>
             </main>
             

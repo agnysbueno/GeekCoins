@@ -82,21 +82,21 @@ function mudaSacolaParaBranco(){
 var slideCollection = 1;
 showCollection(slideCollection);
 
-function plusCollection(m) {
-  showCollection(slideCollection += m);
-  console.log(m);
+function plusCollection(n) {
+  showCollection(slideCollection += n);
+  console.log(n);
 }
 
-function showCollection(m) {
-  let a;
-  let y = document.getElementsByClassName("myCollection");
-  if (m > y.length) {slideCollection = 1}
-  if (m < 1) {slideCollection = y.length} ;
-  for (a = 0; a < y.length; a++) {
-    y[a].style.display = "none";
+function showCollection(n) {
+  let i;
+  let x = document.getElementsByClassName("myCollection");
+  if (n > x.length) {slideCollection = 1}
+  if (n < 1) {slideCollection = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
   }
 
-  y[slideCollection-1].style.display = "flex";
+  x[slideCollection-1].style.display = "flex";
 }
 
 
