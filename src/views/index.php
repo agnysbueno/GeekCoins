@@ -43,7 +43,7 @@ $conexao = conexaoMysql();
             <main>
                 
                 <div id="container-search" class="center">
-                    <form id="form-search" action="/src/repositories/products/searchProducts.php" method="GET">
+                    <form id="form-search" action="search.php" method="GET">
                         <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="" id="icon-search"></button>
                         <input type="search" name="search" id="bar-search" placeholder="Pesquisar...">                        
                     </form>

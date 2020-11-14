@@ -1,37 +1,29 @@
 <?php
-    // definições de host, database, usuário e senha
-    $host = "localhost";
-    $db   = "geekcoins";
-    $user = "root";
-    $pass = "Gui011899*";
-
-    // conecta ao banco de dados
-    $con = mysql_pconnect($host, $user, $pass) or trigger_error(mysql_error(),E_USER_ERROR);
-
-    // seleciona a base de dados em que vamos trabalhar
-    mysql_select_db($db, $con);
+    // conexão
+    require_once('../db/conexao.php');
+    $conexao = conexaoMysql();
 
     // captura o texto na barra de pesquisa
-    $textoPesquisa = $_GET['search'];
+    $textoPesquisa = str_replace(" ", "%", $_GET['search']);
+    $textoPesquisa = "%".$textoPesquisa."%";
 
     // cria a instrução SQL que vai selecionar os dados
-    $query = sprintf("SELECT p.nome, 
+    $query = "SELECT p.nome, 
     p.preco_unitario,
     i.url_imagem
     FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
     INNER JOIN produto_pedido AS pp ON p.idproduto = pp.produto_fk 
-    WHERE p.nome LIKE '%$textoPesquisa%' OR p.descricao LIKE '%$textoPesquisa%' OR p.detalhe LIKE'%$textoPesquisa%'
-    ORDER BY pp.quantidade DESC
-    LIMIT 6");
+    WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')
+    ORDER BY pp.quantidade DESC LIMIT 6";
 
     // executa a query
-    $dados = mysql_query($query, $con) or die(mysql_error());
+    $dados = mysqli_query($conexao, $query);
 
     // transforma os dados em um array
-    $linha = mysql_fetch_assoc($dados);
+    $linha = mysqli_fetch_assoc($dados);
 
     // calcula quantos dados retornaram
-    $total = mysql_num_rows($dados);
+    $total = mysqli_num_rows($dados);
 ?>
 
 <!DOCTYPE html>
@@ -267,7 +259,7 @@
                             </div>
                 <?php
                         // finaliza o loop que vai mostrar os dados
-                        } while($linha = mysql_fetch_assoc($dados));
+                        } while($linha = mysqli_fetch_assoc($dados));
                     // fim do if
                     }
                 ?>
