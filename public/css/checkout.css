@@ -354,7 +354,7 @@ main {
 }
 
 #resume-products {
-    margin-top: 32px;
+    margin-top: 52px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -452,10 +452,4 @@ main {
 #products .item .product-info .price {
     font-size: 16px;
     color: #777777;
-}
-
-input[type="number"] {
-    -webkit-appearance: textfield;
-       -moz-appearance: textfield;
-            appearance: textfield;
 }
