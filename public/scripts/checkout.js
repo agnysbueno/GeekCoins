@@ -25,19 +25,85 @@ function showDivs(n) {
     dots[checkoutIndex-1].className += " selected";
 }
 
-function add(){
-    var current = document.getElementById("total").value;
-    var newValue = current - (-1); //evita concatenações
-    document.getElementById("total").value = newValue;
+function add(obj){
+    let item = document.getElementById(""+obj.id+"");
+    let quantity = item.children[1].children[1].children[1];
+    let divPrice = item.children[1].children[2];
+    let newPrice = 0;
+    let initialPrice = (item.children[1].children[3]).innerText;
+
+    initialPrice = parseFloat(initialPrice.replace(',' , '.'));
+    
+    let newValue = quantity.value - (-1); //evita concatenações
+    
+    quantity.value = newValue;
+    
+    newPrice = quantity.value * initialPrice;
+    newPrice = parseFloat(newPrice).toFixed(2);
+    divPrice.innerHTML = `R$ ${newPrice}`;
+
+    updateTotal();
 }
+
   
-function reduce(){
-    var current = document.getElementById("total").value;
-    if(current > 0) { //evita números negativos
-      var newValue = current - 1;
-      document.getElementById("total").value = newValue;
+function reduce(obj){
+    let item = document.getElementById(""+obj.id+"");
+    let quantity = item.children[1].children[1].children[1];
+    let divPrice = item.children[1].children[2];
+    let newPrice = 0;
+    let initialPrice = (item.children[1].children[3]).innerText;
+
+    initialPrice = parseFloat(initialPrice.replace(',' , '.'));
+    
+    if(quantity.value > 0) { //evita números negativos
+      let newValue = quantity.value - 1;
+      quantity.value = newValue;
+        
+      if (quantity.value !== 0) {
+          newPrice = quantity.value * initialPrice;
+          newPrice = parseFloat(newPrice).toFixed(2);
+          divPrice.innerHTML = `R$ ${newPrice}`;
+
+      } if (quantity.value == 0){
+          let name = confirm("Você deseja mesmo excluir esse item do carrinho?")
+            if (name == true) {
+              item.parentNode.removeChild(item);
+            }
+            else{
+              quantity.value = 1;
+              divPrice.innerHTML = `R$ ${initialPrice}`;
+            }
+      }
     }
+
+    updateTotal();
 }
+
+function updateTotal() {
+  let price1 = document.getElementById("price1");
+  let price2 = document.getElementById("price2");
+  let frete = document.getElementById("frete");
+  let divSubtotal = document.getElementById("subtotal");
+  let divTotal = document.getElementById("total"); 
+
+  price1 = price1.innerText.split(" ")[1];
+  price2 = price2.innerText.split(" ")[1];
+  frete = frete.innerText.split(" ")[1];
+
+  price1 = parseFloat(price1.replace(',' , '.'));
+  price2 = parseFloat(price2.replace(',' , '.'));
+  frete = parseFloat(frete.replace(',' , '.'));
+
+  let subtotal = parseFloat(price1 + price2).toFixed(2);
+
+  let total = price1 + price2 + frete;
+
+  total = parseFloat(total).toFixed(2);
+
+  divSubtotal.innerHTML = `R$ ${subtotal}`;
+  divTotal.innerHTML = `R$ ${total}`;
+}
+
 
 /**************************** CEP form ******************************************/
 

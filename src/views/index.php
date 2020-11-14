@@ -113,7 +113,7 @@ $conexao = conexaoMysql();
                                         <div class="hover-position">
                                             <div class="card">
                                                 <a href="#">
-                                                    <img src="<?php echo($rsProduto['url_imagem']) ?>">
+                                                    <img src="<?php echo($rsProduto['url_imagem'])?>">
                                                 </a>
                                                 <div class="card-info">
                                                     <p class="title cinza-escuro"><?php echo($rsProduto['nome']) ?></p>

@@ -1,3 +1,9 @@
+<?php
+require_once('../db/conexao.php');
+$conexao = conexaoMysql();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <link rel="shortcut icon" href="../../public/assets/icons/coin.ico">
@@ -144,11 +150,6 @@
                                     pago em qualquer banco até a data de vencimento.
                                 </p>
     
-                                <div id="total">
-                                    <p class="cinza-escuro">valor total:</p>
-                                    <p class="laranja-escuro">R$ 93,78</p>
-                                </div>
-    
                                 <button>
                                     <p>Finalizar compra</p>
                                 </button>
@@ -172,11 +173,6 @@
                                         <label class="radio-label" for="debit">Cartão de débito</label>
                                     </div>
                                 </div>
-
-                                <div id="total">
-                                    <p class="cinza-escuro">valor total:</p>
-                                    <p class="laranja-escuro">R$ 93,78</p>
-                                </div>
     
                                 <button>
                                     <p>Finalizar compra</p>
@@ -189,9 +185,9 @@
                                 <p class="text cinza-medio">Cada cupom pode ser usado apenas uma única vez por CPF.
                                 </p>
                                 
-                                <div id="total">
+                                <div class="total">
                                     <p class="cinza-escuro">desconto:</p>
-                                    <p class="laranja-escuro">R$ 10,00</p>
+                                    <p class="laranja-escuro">R$ 0,00</p>
                                 </div>
     
                                 <button>
@@ -215,10 +211,10 @@
                         <p class="cinza-escuro main">total</p>
                     </div>
                     <div id="prices" class="resume-values">
-                        <p class="cinza-medio">R$ 76,99</p>
-                        <p class="cinza-medio">R$ 16,79</p>
+                        <p class="cinza-medio" id="subtotal">R$ 76,99</p>
+                        <p class="cinza-medio" id="frete">R$ 16,79</p>
                         <p class="cinza-medio">R$ 0,00</p>
-                        <p class="laranja-escuro main">R$ 93,78</p>
+                        <p id="total" class="laranja-escuro main">R$ 93,78</p>
                     </div>
                 </div>
                 
@@ -228,7 +224,7 @@
 
                     <div id="products">
                         <h1>Pedido</h1>
-                        <div class="item" id="2">
+                        <div class="item" id="1">
                             <div class="preview">
                                 <img class="product-image" src="../../public/assets/images/caneca-ichigo-hollow-lados.png" alt="Produto">
                                 <button class="trash-button">
@@ -242,11 +238,26 @@
                                     <input class="total" type="number" value="1">
                                     <img class="measure" onclick="add(this.parentElement.parentElement.parentElement)" src="../../public/assets/icons/plus-solid.svg" alt="Aumentar">
                                 </div>
-                                <p class="price">R$ 36,99</p>
+                                <p class="price" id="price1">R$ 36,99</p>
+                                <?php
+                                    $sql = "SELECT preco_unitario
+                                            FROM produto  WHERE idproduto=2";
+
+                                    if($select = mysqli_query($conexao, $sql)){
+
+
+                                        while($rsProduto = mysqli_fetch_array($select)){
+                                ?>
+                                <p hidden><?php echo($rsProduto['preco_unitario']) ?></p>
+                                <?php            
+                                    } 
+                                }
+                                ?>
                             </div>
+                            
                         </div>
 
-                        <div class="item" id="3">
+                        <div class="item" id="2">
                             <div class="preview">
                                 <img class="product-image" src="../../public/assets/images/mousepad-league-of-legends.png" alt="Produto">
                                 <button class="trash-button">
@@ -261,10 +272,24 @@
                                     <input class="total" type="number" value="1">
                                     <img class="measure" onclick="add(this.parentElement.parentElement.parentElement)" src="../../public/assets/icons/plus-solid.svg" alt="Aumentar">
                                 </div>
-                                <p class="price">R$ 39,99</p>
+                                <p class="price" id="price2">R$ 39,99</p>
+                                <?php
+                                    $sql = "SELECT preco_unitario
+                                            FROM produto  WHERE idproduto=3";
+
+                                    if($select = mysqli_query($conexao, $sql)){
+
+
+                                        while($rsProduto = mysqli_fetch_array($select)){
+                                ?>
+                                <p hidden><?php echo($rsProduto['preco_unitario']) ?></p>
+                                <?php            
+                                    } 
+                                }
+                                ?>
                             </div>
+                            
                         </div>
-                        
 
                     </div>
                 </div>
