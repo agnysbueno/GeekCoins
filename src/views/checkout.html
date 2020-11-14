@@ -75,14 +75,15 @@
                             <img class="arrow" src="../../public/assets/icons/angle-up-solid.svg" alt="Recolher">
                         </div>
 
-                        <form id="delivery-info" class="register-info" action="" method="POST">
+                        <form id="delivery-info" class="register-info" action="." method="GET">
                     
                             <label for="cep">
-                                <input type="text" name="cep" size="8" placeholder="CEP">
+                                <input type="text" name="cep" size="10" maxlength="9" placeholder="CEP" id="cep"
+                                    onblur="searchcep(this.value);"/>
                             </label>
                             
                             <label for="logradouro">
-                                <input type="text" name="logradouro" size="38" placeholder="Rua">
+                                <input type="text" name="logradouro" size="38" placeholder="Rua" id="rua">
                             </label>
                         
                             <label for="numero">
@@ -93,20 +94,20 @@
                                 <input type="text" name="complemento" size="10" placeholder="Complemento">
                             </label>
                               
-                            <label for="bairro">
-                                <input type="text" name="bairro" size="24" placeholder="Referência">
+                            <label for="referencia">
+                                <input type="text" name="referencia" size="24" placeholder="Referência">
                             </label>
 
                             <label for="bairro">
-                                <input type="text" name="bairro" size="22" placeholder="Bairro">
+                                <input type="text" name="bairro" size="22" placeholder="Bairro" id="bairro">
                             </label>
                         
                             <label for="cidade">
-                                <input type="text" name="cidade" size="15" placeholder="Cidade">
+                                <input type="text" name="cidade" size="15" placeholder="Cidade" id="cidade">
                             </label>
                                     
                             <label for="estado">
-                                <input type="text" name="estado" size="4" placeholder="Estado">
+                                <input type="text" name="estado" size="2" placeholder="UF" id="uf">
                             </label>
                                                   
                         </form>

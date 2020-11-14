@@ -67,9 +67,10 @@ main {
 }
 
 #container-form {
-    height: 160px;
+    height: 180px;
     display: flex;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .register {
