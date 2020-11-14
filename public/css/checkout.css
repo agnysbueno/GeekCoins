@@ -52,7 +52,7 @@ main {
 }
 
 #column-1 {
-    width: 750px;
+    width: 70%;
     height: 480px;
     display: flex;
     flex-direction: column;
@@ -60,25 +60,32 @@ main {
 }
 
 #column-2 {
-    width: 400px;
+    width: 30%;
     height: auto;
     min-height: 400px;
     overflow: hidden;
-    /* background-color: yellow; */
 }
 
 #container-form {
-    height: 150px;
+    height: 160px;
     display: flex;
     justify-content: space-between;
 }
 
 .register {
-    width: 48%;
     border: 2px solid #c3c3c3;
     box-sizing: border-box;
     border-radius: 8px;
     padding: 16px;
+    /* background-color: #ffffff; */
+}
+
+#personal-data {
+    width: 40%;
+}
+
+#address {
+    width: 57%;
 }
 
 .form-register-title {
@@ -88,6 +95,7 @@ main {
     flex-direction: row;
     justify-content: space-between;
     align-items: top;
+    margin-bottom: 8px;
 }
 
 .form-register-title .icon {
@@ -122,6 +130,7 @@ main {
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
+    /* background-color: #ffffff; */
 }
 
 .form-register-title #truck {
@@ -139,12 +148,16 @@ main {
     border: none;
     background-color: transparent;
     font-size: 16px;
+    /* height: 22px; */
+    border-radius: 6px;
+    padding-left: 3px;
+    border: 1px solid #f1f1f1;
 }
 
 #data-info {
     height: 100px;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
 }
@@ -337,4 +350,92 @@ main {
 
 #values {
     align-items: flex-end;
+}
+
+#resume-products {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+#division-line {
+    height: 1px;
+    width: 92%;
+    border: 1px solid #cecece;
+}
+
+#products {
+    width: 92%;
+    height: auto;
+    min-height: 300px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.item {
+    width: 100%;
+    height: 76px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#products .item .preview {
+    position: relative;
+}
+
+#products .item img {
+    width: 100px;
+    transition: 0.2s;
+}
+
+#products .item .delete {
+    height: 16px;
+    cursor: pointer;
+    position: absolute;
+    left: 36px;
+    top: 6px;
+    opacity: 0;
+}
+
+#products .item .preview img:hover .delete {
+    opacity: 1;
+}
+
+#products .item .product-info {
+    width: 66%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#products .item .product-info .name {
+    font-weight: 500;
+}
+
+#products .item .product-info .quantity input {
+    width: 40px;
+    height: 22px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #c3c3c3;
+    text-align: center;
+    margin: 0 4px;
+}
+
+#products .item .product-info .quantity .measure {
+    width: 10px;
+}
+
+#products .item .product-info .price {
+    font-size: 16px;
+    color: #777777;
 }

@@ -55,15 +55,15 @@
                         </div>
                         <form id="data-info" class="register-info" action="" method="POST">
                             <label for="nome">
-                                <input type="name" name="nome" size="30" placeholder="Seu nome completo">
+                                <input type="name" name="nome" size="32" placeholder="Nome completo">
                             </label>
 
                             <label for="email">
-                                <input type="email" name="email" placeholder="nome@mail.com">
+                                <input type="email" name="email" size="32" placeholder="nome@mail.com">
                             </label>
                                 
                             <label for="telefone">
-                                <input type="text" name="telefone" placeholder="(XX) 0000-0000">
+                                <input type="text" name="telefone" size="32" placeholder="(XX) 0000-0000">
                             </label>
                         </form>
                     </div>
@@ -77,32 +77,36 @@
 
                         <form id="delivery-info" class="register-info" action="" method="POST">
                     
+                            <label for="cep">
+                                <input type="text" name="cep" size="8" placeholder="CEP">
+                            </label>
+                            
                             <label for="logradouro">
-                                <input type="text" name="logradouro" size="7" placeholder="Rua">
+                                <input type="text" name="logradouro" size="38" placeholder="Rua">
                             </label>
                         
                             <label for="numero">
-                                <input type="text" name="numero" size="7" placeholder="Número">
+                                <input type="text" name="numero" size="8" placeholder="Número">
                             </label>
                         
                             <label for="complemento">
                                 <input type="text" name="complemento" size="10" placeholder="Complemento">
                             </label>
-                                    
+                              
                             <label for="bairro">
-                                <input type="text" name="bairro" size="7" placeholder="Bairro">
+                                <input type="text" name="bairro" size="24" placeholder="Referência">
+                            </label>
+
+                            <label for="bairro">
+                                <input type="text" name="bairro" size="22" placeholder="Bairro">
                             </label>
                         
                             <label for="cidade">
-                                <input type="text" name="cidade" size="7" placeholder="Cidade">
+                                <input type="text" name="cidade" size="15" placeholder="Cidade">
                             </label>
                                     
                             <label for="estado">
-                                <input type="text" name="estado" size="10" placeholder="Estado">
-                            </label>
-                                     
-                            <label for="cep">
-                                <input type="text" name="cep" size="7" placeholder="CEP">
+                                <input type="text" name="estado" size="4" placeholder="Estado">
                             </label>
                                                   
                         </form>
@@ -217,7 +221,48 @@
                     </div>
                 </div>
                 
-                
+                <div id="resume-products">
+
+                    <div id="division-line"></div>
+
+                    <div id="products">
+                        <h1>Pedido</h1>
+                        <div class="item">
+                            <div class="preview">
+                                <img src="../../public/assets/images/caneca-ichigo-hollow-lados.png" alt="Produto">
+                                <img class="delete" src="../../public/assets/icons/trash-alt-regular.svg" alt="Remover produto">
+                            </div>
+                            <div class="product-info">
+                                <p class="name">Caneca Ichigo - Coleção Bleach</p>
+                                <div class="quantity">
+                                    <img id="minus" class="measure" onclick="add()" src="../../public/assets/icons/minus-solid.svg" alt="Diminuir">
+                                    <input type="number" placeholder="1">
+                                    <img id="plus" class="measure" onclick="reduce()" src="../../public/assets/icons/plus-solid.svg" alt="Aumentar">
+                                </div>
+                                <p class="price">R$ 36,99</p>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="preview">
+                                <img src="../../public/assets/images/mousepad-league-of-legends.png" alt="Produto">
+                                <img class="delete" src="../../public/assets/icons/trash-alt-regular.svg" alt="Remover produto">
+                            </div>
+
+                            <div class="product-info">
+                                <p class="name">Mousepad League of Legends</p>
+                                <div class="quantity">
+                                    <img id="minus" class="measure" onclick="add()" src="../../public/assets/icons/minus-solid.svg" alt="Diminuir">
+                                    <input type="number" placeholder="1">
+                                    <img id="plus" class="measure" onclick="reduce()" src="../../public/assets/icons/plus-solid.svg" alt="Aumentar">
+                                </div>
+                                <p class="price">R$ 39,99</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
             </div>
                         
         </main>
