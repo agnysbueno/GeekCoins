@@ -353,7 +353,7 @@ main {
 }
 
 #resume-products {
-    margin-top: 20px;
+    margin-top: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -361,12 +361,12 @@ main {
 
 #division-line {
     height: 1px;
-    width: 92%;
+    width: 90%;
     border: 1px solid #cecece;
 }
 
 #products {
-    width: 92%;
+    width: 90%;
     height: auto;
     min-height: 300px;
     overflow: hidden;
@@ -374,9 +374,10 @@ main {
     flex-direction: column;
 }
 
-h1 {
+#products h1 {
     margin-top: 20px;
     font-weight: 500;
+    font-size: 28px;
 }
 
 .item {
@@ -390,23 +391,34 @@ h1 {
 
 #products .item .preview {
     position: relative;
+    transition: 0.8s;
 }
 
-#products .item img {
-    width: 100px;
-    transition: 0.2s;
+#products .item .product-image {
+    width: 90px;
 }
 
-#products .item .delete {
-    height: 16px;
+#products .item .preview .trash-button {
+    width: 26px;
+    height: 26px;
+    background-color: #FFF;
+    border-radius: 20px;
+    border: 1px solid #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     position: absolute;
-    left: 36px;
-    top: 6px;
+    right: -12px;
+    top: -12px;
     opacity: 0;
 }
 
-#products .item .preview img:hover .delete {
+#products .item .preview .delete {
+    height: 14px;
+}
+
+#products .item .preview:hover .trash-button {
     opacity: 1;
 }
 
@@ -433,9 +445,16 @@ h1 {
 
 #products .item .product-info .quantity .measure {
     width: 10px;
+    cursor: pointer;
 }
 
 #products .item .product-info .price {
     font-size: 16px;
     color: #777777;
+}
+
+input[type="number"] {
+    -webkit-appearance: textfield;
+       -moz-appearance: textfield;
+            appearance: textfield;
 }

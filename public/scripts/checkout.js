@@ -26,15 +26,15 @@ function showDivs(n) {
 }
 
 function add(){
-    var atual = document.getElementById("total").value;
-    var novo = atual - (-1); //Evitando Concatenacoes
-    document.getElementById("total").value = novo;
+    var current = document.getElementById("total").value;
+    var newValue = current - (-1); //evita concatenações
+    document.getElementById("total").value = newValue;
 }
   
-  function reduce(){
-    var atual = document.getElementById("total").value;
-    if(atual > 0) { //evita números negativos
-      var novo = atual - 1;
-      document.getElementById("total").value = novo;
+function reduce(){
+    var current = document.getElementById("total").value;
+    if(current > 0) { //evita números negativos
+      var newValue = current - 1;
+      document.getElementById("total").value = newValue;
     }
 }
