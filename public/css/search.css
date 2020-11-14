@@ -125,8 +125,12 @@ body {
 
 .results {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+}
+
+.hover-position {
     margin-bottom: 50px;
 }
 
