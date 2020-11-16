@@ -19,8 +19,8 @@
     // executa a query
     $dados = mysqli_query($conexao, $query);
 
-    // transforma os dados em um array
-    $linha = mysqli_fetch_assoc($dados);
+    // // transforma os dados em um array
+    // $linha = mysqli_fetch_assoc($dados);
 
     // calcula quantos dados retornaram
     $total = mysqli_num_rows($dados);
@@ -226,7 +226,7 @@
                     // se o número de resultados for maior que zero, mostra os dados
                     if($total > 0) {
                         // inicia o loop que vai mostrar todos os dados
-                        do {
+                        while($rsProduto = mysqli_fetch_array($dados)){
                 ?>
                             <div class="hover-position">
                                 <div class="card">
@@ -258,9 +258,7 @@
                                 </div>
                             </div>
                 <?php
-                        // finaliza o loop que vai mostrar os dados
-                        } while($linha = mysqli_fetch_assoc($dados));
-                    // fim do if
+                        } 
                     }
                 ?>
             </div>
