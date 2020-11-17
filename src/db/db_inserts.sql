@@ -79,6 +79,7 @@ INSERT INTO produto VALUES (6,'Caneca Luana','Os caçadores de easter eggs e ref
 INSERT INTO produto VALUES (7,'Caneca Mario World','Caneca para os clássicos fãs da nitendo, não tem como não amar!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,7);
 INSERT INTO produto VALUES (8,'Mousepad Luana','Os caçadores de easter eggs e referências piram com esse mousepad!','Mousepad feito em espuma',45.00,4,6);
 INSERT INTO produto VALUES (9,'Caneca League of Legends','Caneca com alguns dos melhores personagens dos jogos, para impor respeito!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,5);
+
 -- inserting data into table "imagem"
 
 INSERT INTO imagem VALUES (1,'https://i.postimg.cc/fLkC7Hrc/caneca-itachi.png',1);
