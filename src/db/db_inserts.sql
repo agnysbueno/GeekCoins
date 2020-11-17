@@ -82,15 +82,15 @@ INSERT INTO produto VALUES (9,'Caneca League of Legends','Caneca com alguns dos 
 
 -- inserting data into table "imagem"
 
-INSERT INTO imagem VALUES (1,'https://i.postimg.cc/fLkC7Hrc/caneca-itachi.png',1);
-INSERT INTO imagem VALUES (2,'https://i.postimg.cc/nL3TD80V/caneca-bleach.png',2);
-INSERT INTO imagem VALUES (3,'https://i.postimg.cc/7PF97nMz/mousepad-league-of-legends.png',3);
-INSERT INTO imagem VALUES (4,'https://i.postimg.cc/XqCpg38f/camisa-akira-luana.png',4);
-INSERT INTO imagem VALUES (5,'https://i.postimg.cc/bvy3rY0F/capinha-pain-s8.png',5);
-INSERT INTO imagem VALUES (6,'https://i.postimg.cc/fLkC7Hrc/caneca-akira-luana.png',6);
-INSERT INTO imagem VALUES (7,'https://i.postimg.cc/nL3TD80V/caneca-mario-world.png',7);
-INSERT INTO imagem VALUES (8,'https://i.postimg.cc/7PF97nMz/mousepad-akira-luana.png',8);
-INSERT INTO imagem VALUES (9,'https://i.postimg.cc/7PF97nMz/caneca-league-of-legends.png',9);
+INSERT INTO imagem VALUES (1,'../../public/assets/images/caneca-itachi.png',1);
+INSERT INTO imagem VALUES (2,'../../public/assets/images/caneca-bleach.png',2);
+INSERT INTO imagem VALUES (3,'../../public/assets/images/mousepad-league-of-legends.png',3);
+INSERT INTO imagem VALUES (4,'../../public/assets/images/camisa-akira-luana.png',4);
+INSERT INTO imagem VALUES (5,'../../public/assets/images/capinha-pain-s8.png',5);
+INSERT INTO imagem VALUES (6,'../../public/assets/images/caneca-akira-luana.png',6);
+INSERT INTO imagem VALUES (7,'../../public/assets/images/caneca-mario-world.png',7);
+INSERT INTO imagem VALUES (8,'../../public/assets/images/mousepad-akira-luana.png',8);
+INSERT INTO imagem VALUES (9,'../../public/assets/images/caneca-league-of-legends.png',9);
 
 -- inserting data into table "pedido"
 
