@@ -28,6 +28,7 @@ INSERT INTO colecao VALUES (3,'Total Naruto','A coleção Naruto é a mais compl
 INSERT INTO colecao VALUES (4,'Bleach Coffee','Canecas inspiradas nos personagens mais icônicos do anime.');
 INSERT INTO colecao VALUES (5,'Work of Legends','Leve a batalha ao seu escritório! A coleção League of Legends tem os mousepads que mais combinam com você.');
 INSERT INTO colecao VALUES (6,'Você em Akira','Quem é que não gosta de ser exclusivo? A coleção Akira é limitada e personalizada com seu nome!');
+INSERT INTO colecao VALUES (7,'Classicos','Coleção para todos os nostalgicos de plantão');
 
 -- inserting data into table "tema"
 
@@ -74,7 +75,10 @@ INSERT INTO produto VALUES (2,'Caneca Ichigo','A coleção Bleach está cada vez
 INSERT INTO produto VALUES (3,'Mousepad Espada League of Legends','E esse mousepad que parece que a espada tá saindo? 3D tudo de bom','Mousepad feito em espuma',40.00,4,5);
 INSERT INTO produto VALUES (4,'Camiseta Luana','Os caçadores de easter eggs e referências piram com essa camiseta!','Camiseta 100% algodão com estampa em sublimação',69.99,1,6);
 INSERT INTO produto VALUES (5,'Capinha Nahito Pain','Agora você também pode decorar seu celular com a capinha do Nahito','Capinha de celular para o modelo Samsung Galaxy S8 Plus',29.99,3,3);
-
+INSERT INTO produto VALUES (6,'Caneca Luana','Os caçadores de easter eggs e referências piram com essa caneca!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',39.99,2,6);
+INSERT INTO produto VALUES (7,'Caneca Mario World','Caneca para os clássicos fãs da nitendo, não tem como não amar!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,7);
+INSERT INTO produto VALUES (8,'Mousepad Luana','Os caçadores de easter eggs e referências piram com esse mousepad!','Mousepad feito em espuma',45.00,4,6);
+INSERT INTO produto VALUES (9,'Caneca League of Legends','Caneca com alguns dos melhores personagens dos jogos, para impor respeito!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,5);
 -- inserting data into table "imagem"
 
 INSERT INTO imagem VALUES (1,'https://i.postimg.cc/fLkC7Hrc/caneca-itachi.png',1);
@@ -82,6 +86,10 @@ INSERT INTO imagem VALUES (2,'https://i.postimg.cc/nL3TD80V/caneca-bleach.png',2
 INSERT INTO imagem VALUES (3,'https://i.postimg.cc/7PF97nMz/mousepad-league-of-legends.png',3);
 INSERT INTO imagem VALUES (4,'https://i.postimg.cc/XqCpg38f/camisa-akira-luana.png',4);
 INSERT INTO imagem VALUES (5,'https://i.postimg.cc/bvy3rY0F/capinha-pain-s8.png',5);
+INSERT INTO imagem VALUES (6,'https://i.postimg.cc/fLkC7Hrc/caneca-akira-luana.png',6);
+INSERT INTO imagem VALUES (7,'https://i.postimg.cc/nL3TD80V/caneca-mario-world.png',7);
+INSERT INTO imagem VALUES (8,'https://i.postimg.cc/7PF97nMz/mousepad-akira-luana.png',8);
+INSERT INTO imagem VALUES (9,'https://i.postimg.cc/7PF97nMz/caneca-league-of-legends.png',9);
 
 -- inserting data into table "pedido"
 
@@ -89,6 +97,7 @@ INSERT INTO pedido VALUES (1,2,107.97,15.00,0.00,92.97,'8880909032984387','Retir
 INSERT INTO pedido VALUES (2,3,160.00,NULL,16.00,176.00,'1230909032984395','Entrega à domicílio');
 INSERT INTO pedido VALUES (3,1,89.97,NULL,0.00,89.97,'8734509032984395','Retirada no loocal');
 INSERT INTO pedido VALUES (4,4,69.99,20.00,40.00,89.99,'47545090315843698','Entrega à domicílio');
+INSERT INTO pedido VALUES (5,2,73.98,0.00,0.00,73.98,'8880909032984444','Retirada no local');
 
 -- inserting data into table "produto_tema"
 
@@ -97,6 +106,10 @@ INSERT INTO produto_tema VALUES (2,2,5);
 INSERT INTO produto_tema VALUES (3,3,10);
 INSERT INTO produto_tema VALUES (4,4,9);
 INSERT INTO produto_tema VALUES (5,5,1);
+INSERT INTO produto_tema VALUES (6,6,9);
+INSERT INTO produto_tema VALUES (7,7,7);
+INSERT INTO produto_tema VALUES (8,8,9);
+INSERT INTO produto_tema VALUES (9,9,10);
 
 -- inserting data into table "produto_tag"
 
@@ -122,6 +135,18 @@ INSERT INTO produto_tag VALUES(19, 5, 2);
 INSERT INTO produto_tag VALUES(20, 5, 7);
 INSERT INTO produto_tag VALUES(21, 5, 8);
 INSERT INTO produto_tag VALUES(22, 5, 15);
+INSERT INTO produto_tag VALUES(23, 6, 2);
+INSERT INTO produto_tag VALUES(24, 6, 3);
+INSERT INTO produto_tag VALUES(25, 6, 22);
+INSERT INTO produto_tag VALUES(26, 6, 13);
+INSERT INTO produto_tag VALUES(27, 8, 2);
+INSERT INTO produto_tag VALUES(28, 8, 3);
+INSERT INTO produto_tag VALUES(29, 8, 22);
+INSERT INTO produto_tag VALUES(30, 8, 13);
+INSERT INTO produto_tag VALUES(31, 7, 6);
+INSERT INTO produto_tag VALUES(32, 7, 8);
+INSERT INTO produto_tag VALUES(33, 9, 6);
+INSERT INTO produto_tag VALUES(34, 9, 7);
 
 -- inserting data into table "produto_pedido"
 
@@ -130,3 +155,4 @@ INSERT INTO produto_pedido VALUES (2,3,2,4,160.00);
 INSERT INTO produto_pedido VALUES (3,1,1,1,33.99);
 INSERT INTO produto_pedido VALUES (4,5,3,3,89.97);
 INSERT INTO produto_pedido VALUES (5,4,4,1,69.99);
+INSERT INTO produto_pedido VALUES (6,7,5,2,73.98);
