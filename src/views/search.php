@@ -259,28 +259,38 @@
                             </div>
                 <?php
                         } 
+                ?>
+                        <div class="results-navigation">
+
+                        <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" onclick="plusCards(-1)">
+
+                        <div class="slide-buttons">
+                            <span class="button-slide demo" onclick="currentDiv(1)"></span>
+                            <span class="button-slide demo" onclick="currentDiv(2)"></span>
+                            <span class="button-slide demo" onclick="currentDiv(3)"></span>
+                            <span class="button-slide demo" onclick="currentDiv(4)"></span>
+                            <span class="button-slide demo" onclick="currentDiv(5)"></span>
+                            <span class="button-slide demo" onclick="currentDiv(6)"></span>
+                            <span class="button-slide demo" onclick="currentDiv(7)"></span>
+                            <span class="button-slide demo" onclick="currentDiv(8)"></span>
+                        </div>
+
+                        <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusCards(+1)">
+
+                        </div>
+                <?php
+                    } else {
+                ?>
+                        <div id="nothingToReturn">
+                            <p>Ops... não conseguimos achar o que você está procurando :(</p>
+                            <p>Mas já que estamos aqui, vamos jogar o Jogo da Memória Geek?</p>
+                        </div>
+
+                <?php    
                     }
                 ?>
             </div>
 
-            <div class="results-navigation">
-
-                <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" onclick="plusCards(-1)">
-
-                <div class="slide-buttons">
-                    <span class="button-slide demo" onclick="currentDiv(1)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(2)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(3)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(4)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(5)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(6)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(7)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(8)"></span>
-                </div>
-
-                <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusCards(+1)">
-
-            </div>
         </div>
     </main>
 </body>
