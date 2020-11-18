@@ -3,6 +3,9 @@
     require_once('../db/conexao.php');
     $conexao = conexaoMysql();
 
+    //paginação
+    $total_reg = 6; // produtos por página
+
     // captura o texto na barra de pesquisa
     $textoPesquisa = str_replace(" ", "%", $_GET['search']);
     $textoPesquisa = "%".$textoPesquisa."%";
@@ -12,9 +15,7 @@
     p.preco_unitario,
     i.url_imagem
     FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-    INNER JOIN produto_pedido AS pp ON p.idproduto = pp.produto_fk 
-    WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')
-    ORDER BY pp.quantidade DESC LIMIT 6";
+    WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')";
 
     // executa a query
     $dados = mysqli_query($conexao, $query);
@@ -24,6 +25,19 @@
 
     // calcula quantos dados retornaram
     $total = mysqli_num_rows($dados);
+
+    $total_paginas = $total / $total_reg; // verifica o número total de páginas
+?>
+
+<?php 
+    
+    $total_reg = 6; // produtos por página
+
+    $pagina_atual = 0;
+
+    $total_paginas = $total / $total_reg; // verifica o número total de páginas
+
+    $proxima_pag = ($pagina_atual * $total_reg) - $total_reg 
 ?>
 
 <!DOCTYPE html>
@@ -176,7 +190,7 @@
         <div class="container-intern center">
 
             <div id="container-search" class="center">
-                <form role="search" id="form-search" action="../repositories/products/searchProducts.php" method="GET">
+                <form role="search" id="form-search" action="search.php" method="GET">
                     <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="ícone de lupa" id="icon-search"></button>
                     <input type="search" incremental="incremental" name="search" id="bar-search" placeholder="Pesquisar...">                        
                 </form>
@@ -220,14 +234,37 @@
                 </div>
             </div>
 
-            <div class="results">
+            <div class="all-results">
                 
-                <?php
+            <?php
                     // se o número de resultados for maior que zero, mostra os dados
                     if($total > 0) {
-                        // inicia o loop que vai mostrar todos os dados
-                        while($rsProduto = mysqli_fetch_array($dados)){
+                        for($i = 0; $i <= $total_paginas; $i++){
+
+                            $pagina_atual = $i;
+
+                            $filtro = $pagina_atual * $total_reg;
+
+                            $sql = "SELECT p.nome, 
+                                        p.preco_unitario,
+                                        i.url_imagem
+                                        FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
+                                        WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')
+                                        LIMIT $filtro, $total_reg";
+
+                            $dados = mysqli_query($conexao, $sql)
+
+                            ?>
+
+                        <div class="results myPages">
+                        <?php
+                            //https://www.devmedia.com.br/paginacao-em-php/21972
+
+                            // inicia o loop que vai mostrar os dados
+                            while($rsProduto = mysqli_fetch_array($dados)){
+                            
                 ?>
+                        
                             <div class="hover-position">
                                 <div class="card">
                                     <a href="#">
@@ -257,32 +294,42 @@
                                     
                                 </div>
                             </div>
+                        
                 <?php
+                            }
+                            ?>
+                        </div>
+                <?php            
                         } 
                     }
                 ?>
             </div>
-
+            
             <div class="results-navigation">
 
-                <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" onclick="plusCards(-1)">
+                <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" 
+                    onclick="plusDivs(-1)">
 
                 <div class="slide-buttons">
-                    <span class="button-slide demo" onclick="currentDiv(1)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(2)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(3)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(4)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(5)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(6)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(7)"></span>
-                    <span class="button-slide demo" onclick="currentDiv(8)"></span>
+                    <?php 
+                        for($i = 0; $i <= $total_paginas; $i++){
+
+                            ?>
+                            <span class="button-slide demo" onclick="currentDiv(<?php echo($i + 1) ?>)"></span>
+                        <?php
+                        }
+                        ?>
                 </div>
 
-                <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusCards(+1)">
+                <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" 
+                    onclick="plusDivs(+1)">
 
             </div>
         </div>
     </main>
+    
+    <!--SCRIPTS JS-->
+    <script src="../../public/scripts/search.js"></script>
 </body>
 </html>
     
