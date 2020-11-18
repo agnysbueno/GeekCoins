@@ -365,7 +365,86 @@ body {
     transform: rotate(0deg) scale(1);
 }
 
-
 #nothingToReturn {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
+}
+
+#nothingToReturn p {
+    font-size: 20px;
+}
+
+/***********************************************joguinho****************************************************/
+
+#game {
+	position: relative;
+	width: 100%;
+	height: 495px;
+	border-radius: 10px;
+	margin: 10px auto;
+    background-color: transparent;
+}
+
+.card{
+	width: 120px;
+	height: 180px;
+	perspective: 600px;
+	position: absolute;
+	border-radius: 10px;
+}
+
+.face{
+	border-radius: 10px;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	transition: all 1s;
+	backface-visibility: hidden;
+}
+
+.front{
+	transform: rotateY(-180deg);
+}
+
+.flipped.front{
+	transform: rotateY(0deg);
+}
+
+.back{
+	background: url(../assets/images/verso.jpg);
+}
+
+.flipped.back{
+	transform: rotateY(180deg);
+}
+
+.card:hover, .face.flipped{
+	box-shadow: 0 0 10px #aaa;
+}
+
+.face.flipped.match{
+	box-shadow: 0 0 10px #0f0;
+}
+
+#match{
+	position: relative;
+	margin: 0 auto;
+	top: 250px;
+	z-index: -1;
+	opacity: 1;
+	transition-property: top, opacity;
+	transition-duration: 1.5s;
+}
+
+#gameOver{
+	position: absolute;
+	top: 0;
+	border-radius: 5px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+	z-index: -2;
+}
+
+#imgGameOver{
+	margin-top: 100px;
 }

@@ -18,7 +18,7 @@
 	for(var i = 0; i < 16; i++){
 		//cria um objeto img com um src e um id
 		var img = {
-			src: "img/" + i + ".jpg",
+			src: "../assets/images/" + i + ".jpg",
 			id: i%8
 		};
 		
@@ -52,8 +52,8 @@
 			
 			//posiciona as cartas no tabuleiro
 			var card = document.querySelector("#card" + i);
-			card.style.left = (i % 8) === 0 ? 5 + "px" : 5 + ((i % 8) * 165) + "px";
-			card.style.top = i/8 >= 1 ? 250 + "px" : 5 + "px";
+			card.style.left = (i % 8) === 0 ? 5 + "px" : 5 + ((i % 8) * 125) + "px";
+			card.style.top = i/8 >= 1 ? 190 + "px" : 5 + "px";
 			
 			//adiciona às cartas o evento click chamando a função que vira as cartas
 			card.addEventListener("click",flipCard,false);
