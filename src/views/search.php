@@ -300,15 +300,15 @@
                             ?>
                         </div>
                 <?php            
-                        } 
-                    }
+                        }
+                    } 
                 ?>
+
             </div>
             
             <div class="results-navigation">
 
-                <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" 
-                    onclick="plusDivs(-1)">
+                <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" onclick="plusDivs(-1)">
 
                 <div class="slide-buttons">
                     <?php 
@@ -321,10 +321,9 @@
                         ?>
                 </div>
 
-                <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" 
-                    onclick="plusDivs(+1)">
-
+                <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusDivs(+1)">
             </div>
+
         </div>
     </main>
     
