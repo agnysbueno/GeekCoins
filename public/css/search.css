@@ -4,7 +4,7 @@ body {
 
 .container-results{
     width: 88%;
-    min-height: 700px;
+    min-height: 100vh;
     height: auto;
     overflow: hidden;
     background-color: #F9F9F9;

@@ -27,7 +27,7 @@ $conexao = conexaoMysql();
             </a>
 
             <div id="container-search">
-                <form role="search" id="form-search" action="/src/repositories/products/searchProducts.php" method="GET">
+                <form role="search" id="form-search" action="search.php" method="GET">
                     <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="ícone de lupa" id="icon-search"></button>
                     <input type="search" incremental="incremental" name="search" id="bar-search" placeholder="Pesquisar...">                        
                 </form>

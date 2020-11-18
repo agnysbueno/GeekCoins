@@ -16,9 +16,6 @@ function showDivs(n) {
     let x = document.getElementsByClassName("myPages");
     var dots = document.getElementsByClassName("demo");
 
-    console.log(x.length)
-    console.log(page)
-
     if (n > x.length) {page = 1}
     if (n < 1) {page = x.length}
     for (i = 0; i < x.length; i++) {

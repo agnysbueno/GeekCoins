@@ -1,3 +1,9 @@
+<?php
+require_once('../db/conexao.php');
+$conexao = conexaoMysql();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <link rel="shortcut icon" href="../../public/assets/icons/coin.ico">
@@ -21,7 +27,7 @@
             </a>
 
             <div id="container-search">
-                <form role="search" id="form-search" action="/src/repositories/products/searchProducts.php" method="GET">
+                <form role="search" id="form-search" action="search.php" method="GET">
                     <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="ícone de lupa" id="icon-search"></button>
                     <input type="search" incremental="incremental" name="search" id="bar-search" placeholder="Pesquisar...">                        
                 </form>
@@ -114,94 +120,57 @@
                 <h2 id="title-more-products" class="cinza-escuro"> Outros itens que você pode gostar</h2>
                     
                         <div class="cards-page">
-                            <div class="hover-position">
-                                <div class="card">
-                                    <a href="#">
-                                        <img alt="imagem do produto" src="../../public/assets/images/caneca-itachi.png">
-                                    </a>
-                                    <div class="card-info">
-                                        <p class="title cinza-escuro">Caneca Itachi - Coleção Naruto</p>
-                                        <p class="price laranja-escuro">R$33,99</p>
-                                    </div>
 
-                                    <div class="card-hover">
-                                        <div id="text-hover">
-                                            <p>frete grátis!</p>
-                                            <p>entrega em 03 dias úteis</p>
-                                        </div>  
-                                        <div id="container-icons">
-                                            <a href="#" class="button-icons">
-                                                <img src="../../public/assets/icons/favoritos.svg" alt="Lista de favoritos" id="icon-wishlist">
-                                                <p>Salvar</p>
-                                            </a>
-                                            <a href="#" class="button-icons">
-                                                <img src="../../public/assets/icons/sacola.svg" alt="Sacola de compras" id="icon-shopping">
-                                                <p>Adicionar</p>
-                                            </a>
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
+                        <?php
+                        //SELECT para trazer os producos
+                            $sql = "SELECT p.nome, 
+                                        p.preco_unitario,
+                                        i.url_imagem
+                                        FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
+                                        INNER JOIN produto_pedido AS pp ON p.idproduto = pp.produto_fk
+                                        WHERE p.categoria_fk = 2 
+                                        ORDER BY pp.quantidade DESC
+                                        LIMIT 3"; /* 3 mais vendidos na mesma categoria */
 
-                            <div class="hover-position">
-                                <div class="card">
-                                    <a href="#">
-                                        <img alt="imagem do produto" src="../../public/assets/images/caneca-league-of-legends.png">
-                                    </a>
-                                    <div class="card-info">
-                                        <p class="title cinza-escuro">Caneca League Of Legends</p>
-                                        <p class="price laranja-escuro">R$32,99</p>
-                                    </div>
+                            if($select = mysqli_query($conexao, $sql)){
 
-                                    <div class="card-hover">
-                                        <div id="text-hover">
-                                            <p>frete grátis</p>
-                                            <p>entrega em 03 dias úteis</p>
-                                        </div> 
-                                        <div id="container-icons">
-                                            <a href="#" class="button-icons">
-                                                <img src="../../public/assets/icons/favoritos.svg" alt="Lista de favoritos" id="icon-wishlist"> 
-                                                <p>Salvar</p>
-                                            </a>
-                                            <a href="#" class="button-icons">
-                                                <img src="../../public/assets/icons/sacola.svg" alt="Sacola de compras" id="icon-shopping">
-                                                <p>Adicionar</p>
-                                            </a>
-                                        </div>  
-                                    </div>
 
-                                </div>
-                            </div>
+                                while($rsProduto = mysqli_fetch_array($select)){
+                        ?>
+                                        <div class="hover-position">
+                                            <div class="card">
+                                                <a href="#">
+                                                    <img src="<?php echo($rsProduto['url_imagem'])?>">
+                                                </a>
+                                                <div class="card-info">
+                                                    <p class="title cinza-escuro"><?php echo($rsProduto['nome']) ?></p>
+                                                    <p class="price laranja-escuro"><?php echo('R$ '.$rsProduto['preco_unitario']) ?></p>
+                                                </div>
 
-                            <div class="hover-position">
-                                <div class="card">
-                                    <a href="#">
-                                        <img alt="imagem do produto" src="../../public/assets/images/caneca-clash-royale.png">
-                                    </a>
-                                    <div class="card-info">
-                                        <p class="title cinza-escuro">Caneca Clash Royale</p>
-                                        <p class="price laranja-escuro">R$34,99</p>
-                                    </div>
-
-                                    <div class="card-hover"> 
-                                        <div id="text-hover">
-                                            <p>frete de R$ 12,56</p>
-                                            <p>entrega em 03 dias úteis</p>
-                                        </div>  
-                                        <div id="container-icons">
-                                            <a href="#" class="button-icons">
-                                                <img src="../../public/assets/icons/favoritos.svg" alt="Lista de favoritos" id="icon-wishlist">
-                                                <p>Salvar</p>
-                                            </a>
-                                            <a href="#" class="button-icons">
-                                                <img src="../../public/assets/icons/sacola.svg" alt="Sacola de compras" id="icon-shopping">
-                                                <p>Adicionar</p>
-                                            </a>
-                                        </div> 
-                                    </div>
-                                </div>
-                            </div>
-
+                                                <div class="card-hover">
+                                                    <div id="text-hover">
+                                                        <p>frete de R$ 13,42</p>
+                                                        <p>entrega em 03 dias úteis</p>
+                                                    </div>  
+                                                    <div id="container-icons">
+                                                        <a href="#" class="button-icons">
+                                                            <img src="../../public/assets/icons/favoritos.svg" alt="" id="icon-wishlist">
+                                                            <p>Salvar</p>
+                                                        </a>
+                                                        <a href="#" class="button-icons">
+                                                            <img src="../../public/assets/icons/sacola.svg" alt="" id="icon-shopping">
+                                                            <p>Adicionar</p>
+                                                        </a>
+                                                    </div> 
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                            <?php            
+                                } 
+                            }
+                            ?>
+                        
                         </div>
 
             </div>

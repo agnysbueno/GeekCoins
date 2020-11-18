@@ -332,28 +332,4 @@
 </body>
 </html>
     
-<!--
-
-ORDENAR POR MAIOR PREÇO
-    SELECT p.nome, 
-    p.preco_unitario,
-    i.url_imagem
-    FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-    INNER JOIN produto_pedido AS pp ON p.idproduto = pp.produto_fk
-    WHERE p.nome LIKE '%$textoPesquisa%'  OR p.descricao LIKE '%$textoPesquisa%' OR p.detalhe LIKE '%$textoPesquisa%'
-    ORDER BY p.preco_unitario DESC
-    LIMIT 6
-
-ORDENAR POR MENOR PREÇO
-    SELECT p.nome, 
-    p.preco_unitario,
-    i.url_imagem
-    FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-    INNER JOIN produto_pedido AS pp ON p.idproduto = pp.produto_fk
-    WHERE p.nome LIKE '%$textoPesquisa%'  OR p.descricao LIKE '%$textoPesquisa%' OR p.detalhe LIKE '%$textoPesquisa%'
-    ORDER BY p.preco_unitario ASC
-    LIMIT 6
-
--->
-
 
