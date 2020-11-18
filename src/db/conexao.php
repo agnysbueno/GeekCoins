@@ -10,7 +10,7 @@
         
         $user = "root";
 
-        $password = "Gui011899*";
+        $password = "";
 
         $database = "geekcoins";
 

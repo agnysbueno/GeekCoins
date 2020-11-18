@@ -258,7 +258,6 @@
 
                         <div class="results myPages">
             <?php
-                        //https://www.devmedia.com.br/paginacao-em-php/21972
 
                         // inicia o loop que vai mostrar os dados
                         while($rsProduto = mysqli_fetch_array($dados)){

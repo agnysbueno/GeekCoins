@@ -384,7 +384,7 @@ body {
     background-color: transparent;
 }
 
-.card{
+#game .card{
 	width: 120px;
 	height: 180px;
 	perspective: 600px;
@@ -417,7 +417,7 @@ body {
 	transform: rotateY(180deg);
 }
 
-.card:hover, .face.flipped{
+#game .card:hover, .face.flipped{
 	box-shadow: 0 0 10px #aaa;
 }
 
