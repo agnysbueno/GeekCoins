@@ -11,7 +11,7 @@
     p.preco_unitario,
     i.url_imagem
     FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-    WHERE colecao_fk = 1
+    WHERE colecao_fk = 6
     GROUP BY p.nome
     ORDER BY p.preco_unitario ASC";
 
@@ -38,7 +38,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blood Label - Geek Coins</title>
+    <title>Akira - Geek Coins</title>
 
     <link href="../../public/css/global.css" rel="stylesheet"/>
     <link href="../../public/css/search.css" rel="stylesheet"/>
@@ -134,7 +134,7 @@
                 
                 <label class="checkbox-label" for="blood-label"> 
                     <p class="name">Blood Label</p>
-                    <input type="checkbox" id="blood-label" name="blood-label" value="bloodlabel"  checked="checked">
+                    <input type="checkbox" id="blood-label" name="blood-label" value="bloodlabel">
                     <span class="checkbox-custom"></span>
                     <span class="checkbox-checked"></span>
                 </label>
@@ -148,7 +148,7 @@
                 
                 <label class="checkbox-label" for="akira"> 
                     <p class="name">Akira</p>
-                    <input type="checkbox" id="akira" name="akira" value="akira">
+                    <input type="checkbox" id="akira" name="akira" value="akira" checked="checked">
                     <span class="checkbox-custom"></span>
                     <span class="checkbox-checked"></span>                   
                 </label>
@@ -241,7 +241,7 @@
                                 p.preco_unitario,
                                 i.url_imagem
                                 FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-                                WHERE colecao_fk = 1
+                                WHERE colecao_fk = 6
                                 GROUP BY p.nome
                                 ORDER BY p.preco_unitario ASC
                                 LIMIT $filtro, $total_reg";

@@ -77,7 +77,7 @@
                 
                 <div id="checkboxes-products">
                     <label class="checkbox-label" for="all-products">
-                        <input type="checkbox" id="all-products" name="all-products" value="all" checked="checked>
+                        <input type="checkbox" id="all-products" name="all-products" value="all" checked="checked">
                         <span class="checkbox-product-custom">
                             <span class="name-option">Todos</span>
                         </span>
@@ -105,7 +105,7 @@
                     </label>
 
                     <label class="checkbox-label" for="mousepad">
-                        <input type="checkbox" id="mousepad" name="mousepad" value="mousepad"">
+                        <input type="checkbox" id="mousepad" name="mousepad" value="mousepad">
                         <span class="checkbox-product-custom">
                             <span class="name-option">Mousepad</span>
                         </span>
@@ -146,9 +146,9 @@
                     <span class="checkbox-checked"></span>                   
                 </label>
                 
-                <label class="checkbox-label" for="bestenemies4ever"> 
-                    <p class="name">BestEnemies4ever</p>
-                    <input type="checkbox" id="bestenemies4ever" name="bestenemies4ever" value="bestenemies4ever">
+                <label class="checkbox-label" for="akira"> 
+                    <p class="name">Akira</p>
+                    <input type="checkbox" id="akira" name="akira" value="akira">
                     <span class="checkbox-custom"></span>
                     <span class="checkbox-checked"></span>                   
                 </label>

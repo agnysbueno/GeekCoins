@@ -288,6 +288,8 @@ footer a:hover {
     border-bottom: #FFD72F solid 2px;
 }
 
+/******************** DROPDOWN NAVBAR ****************************/
+
 .dropdown {
     /* float: left; */
     overflow: hidden;
