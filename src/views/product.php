@@ -58,7 +58,7 @@ $conexao = conexaoMysql();
                     </div>
 
                     <div class="image img3" onclick="image(3)">
-                        <img src="../../public/assets/images/caneca-tokyo-ghoul.png" alt="Caneca">
+                        <img src="../../public/assets/images/caneca-ichigo-hollow-preta.png" alt="Caneca">
                     </div>
                 </div>
                 <div id="max-images">
