@@ -237,33 +237,33 @@
             <div class="all-results">
                 
             <?php
-                    // se o número de resultados for maior que zero, mostra os dados
-                    if($total > 0) {
-                        for($i = 0; $i <= $total_paginas; $i++){
+                // se o número de resultados for maior que zero, mostra os dados
+                if($total > 0) {
+                    for($i = 0; $i <= $total_paginas; $i++){
 
-                            $pagina_atual = $i;
+                        $pagina_atual = $i;
 
-                            $filtro = $pagina_atual * $total_reg;
+                        $filtro = $pagina_atual * $total_reg;
 
-                            $sql = "SELECT p.nome, 
-                                        p.preco_unitario,
-                                        i.url_imagem
-                                        FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-                                        WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')
-                                        LIMIT $filtro, $total_reg";
+                        $sql = "SELECT p.nome, 
+                                    p.preco_unitario,
+                                    i.url_imagem
+                                    FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
+                                    WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')
+                                    LIMIT $filtro, $total_reg";
 
-                            $dados = mysqli_query($conexao, $sql)
+                        $dados = mysqli_query($conexao, $sql)
 
-                            ?>
+            ?>
 
                         <div class="results myPages">
-                        <?php
-                            //https://www.devmedia.com.br/paginacao-em-php/21972
+            <?php
+                        //https://www.devmedia.com.br/paginacao-em-php/21972
 
-                            // inicia o loop que vai mostrar os dados
-                            while($rsProduto = mysqli_fetch_array($dados)){
+                        // inicia o loop que vai mostrar os dados
+                        while($rsProduto = mysqli_fetch_array($dados)){
                             
-                ?>
+            ?>
                         
                             <div class="hover-position">
                                 <div class="card">
@@ -295,40 +295,137 @@
                                 </div>
                             </div>
                         
-                <?php
-                            }
-                            ?>
-                        </div>
-                <?php            
+            <?php
                         }
-                    } 
-                ?>
+            ?>
+                        </div>
+            <?php            
+                    }
+            ?>
+                    <div class="results-navigation">
+
+                        <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" onclick="plusDivs(-1)">
+
+                        <div class="slide-buttons">
+                            <?php 
+                                for($i = 0; $i <= $total_paginas; $i++){
+
+                                    ?>
+                                    <span class="button-slide demo" onclick="currentDiv(<?php echo($i + 1) ?>)"></span>
+                                <?php
+                                }
+                                ?>
+                        </div>
+
+                        <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusDivs(+1)">
+                    </div>
+            <?php 
+                } else {
+            ?> 
+                    <div id="nothingToReturn">
+                        <p>Ops... não conseguimos encontrar o que você está procurando :(</p>
+                        <p>Mas já que estamos aqui, vamos jogar o Jogo da Memória Geek?</p>
+                    </div>
+
+                    <div id="game">
+                        <div class="card" id="card0">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card1">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card2">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card3">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card4">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card5">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card6">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card7">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card8">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card9">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card10">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card11">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card12">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card13">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card14"> 
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+
+                        <div class="card" id="card15">
+                            <div class="face back"></div>
+                            <div class="face front"></div>
+                        </div>
+                        
+                        <img id="match" src="../../public/assets/images/match.png"/>
+                        
+                        <div id="gameOver">
+                            <img id="imgGameOver" src="../../public/assets/images/gameover.png" />
+                        </div>
+                    </div>
+            <?php      
+                }
+            ?>
 
             </div>
             
-            <div class="results-navigation">
-
-                <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="Voltar" onclick="plusDivs(-1)">
-
-                <div class="slide-buttons">
-                    <?php 
-                        for($i = 0; $i <= $total_paginas; $i++){
-
-                            ?>
-                            <span class="button-slide demo" onclick="currentDiv(<?php echo($i + 1) ?>)"></span>
-                        <?php
-                        }
-                        ?>
-                </div>
-
-                <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusDivs(+1)">
-            </div>
-
         </div>
     </main>
     
     <!--SCRIPTS JS-->
     <script src="../../public/scripts/search.js"></script>
+    <script src="../../public/scripts/game.js"></script>
 </body>
 </html>
     
