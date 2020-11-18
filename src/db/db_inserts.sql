@@ -151,7 +151,7 @@ INSERT INTO produto_tag VALUES(34, 9, 7);
 
 -- inserting data into table "produto_pedido"
 
-INSERT INTO produto_pedido VALUES (1,2,1,2,73.98);
+INSERT INTO produto_pedido VALUES (1,6,1,2,73.98);
 INSERT INTO produto_pedido VALUES (2,3,2,4,160.00);
 INSERT INTO produto_pedido VALUES (3,1,1,1,33.99);
 INSERT INTO produto_pedido VALUES (4,5,3,3,89.97);
