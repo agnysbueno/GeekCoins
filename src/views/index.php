@@ -29,13 +29,40 @@ $conexao = conexaoMysql();
                 </div>
                 <nav id="menu-items" class="center">  
                     <ul>
+                        <!-- <li class="preto">
+                            <div class="dropdown">
+                                <button class="dropbtn">Temas</button>
+                                <div class="dropdown-content">
+                                    <a href="#">Naruto</a>
+                                    <a href="#">Super Mario</a>
+                                    <a href="#">Berserk</a>
+                                    <a href="#">Bleach</a>
+                                    <a href="#">Clash Royale</a>
+                                    <a href="#">LOL</a>
+                                    <a href="#">Akira</a>
+                                </div>
+                            </div>
+                        </li> -->
                         <a href="#"><li class="preto">Temas</li></a>
-                        <a href="#"><li class="preto">Canecas</li></a>
-                        <a href="#"><li class="preto">Quadros</li></a> 
-                        <a href="#"><li class="preto">Camisetas</li></a> 
-                        <a href="#"><li class="preto">Mousepads</li></a> 
-                        <a href="#"><li class="preto">Capinhas</li></a> 
-                        <a href="#"><li class="preto">Coleções</li></a>  
+                        <a href="canecas.php"><li class="preto">Canecas</li></a>
+                        <a href="quadros.php"><li class="preto">Quadros</li></a> 
+                        <a href="camisetas.php"><li class="preto">Camisetas</li></a> 
+                        <a href="mousepads.php"><li class="preto">Mousepads</li></a> 
+                        <a href="capinhas.php"><li class="preto">Capinhas</li></a> 
+                        <a href="#"><li class="preto">Coleções</li></a>
+                        <!-- <li class="preto">
+                            <div class="dropdown">
+                                <button class="dropbtn">Coleções</button>
+                                <div class="dropdown-content">
+                                    <a href="bloodlabel.php">Blood Label</a>
+                                    <a href="tv2home.php">TV 2 HOME</a>
+                                    <a href="#">Naruto</a>
+                                    <a href="#">Bleach</a>
+                                    <a href="#">League Of Legends</a>
+                                    <a href="#">Akira</a>
+                                </div>
+                            </div>
+                        </li> -->  
                     </ul>
                 </nav>
             </header>
@@ -43,7 +70,7 @@ $conexao = conexaoMysql();
             <main>
                 
                 <div id="container-search" class="center">
-                    <form id="form-search" action="search.php" method="GET">
+                    <form role="search" id="form-search" action="search.php" method="GET">
                         <button type="submit" id="button-search"><img src="../../public/assets/icons/search-solid.svg" alt="" id="icon-search"></button>
                         <input type="search" name="search" id="bar-search" placeholder="Pesquisar...">                        
                     </form>

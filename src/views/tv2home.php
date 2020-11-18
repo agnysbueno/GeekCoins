@@ -6,17 +6,14 @@
     //paginação
     $total_reg = 6; // produtos por página
 
-    // captura o texto na barra de pesquisa
-    $pesquisa = $_GET['search'];
-    $textoPesquisa = str_replace(" ", "%", $_GET['search']);
-    $textoPesquisa = "%".$textoPesquisa."%";
-
     // cria a instrução SQL que vai selecionar os dados
     $query = "SELECT p.nome, 
     p.preco_unitario,
     i.url_imagem
     FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-    WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')";
+    WHERE colecao_fk = 2
+    GROUP BY p.nome
+    ORDER BY p.preco_unitario ASC";
 
     // executa a query
     $dados = mysqli_query($conexao, $query);
@@ -41,7 +38,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo($pesquisa) ?> - Pesquisa Geek Coins</title>
+    <title>TV 2 HOME - Geek Coins</title>
 
     <link href="../../public/css/global.css" rel="stylesheet"/>
     <link href="../../public/css/search.css" rel="stylesheet"/>
@@ -80,7 +77,7 @@
                 
                 <div id="checkboxes-products">
                     <label class="checkbox-label" for="all-products">
-                        <input type="checkbox" id="all-products" name="all-products" value="all">
+                        <input type="checkbox" id="all-products" name="all-products" value="all" checked="checked>
                         <span class="checkbox-product-custom">
                             <span class="name-option">Todos</span>
                         </span>
@@ -108,7 +105,7 @@
                     </label>
 
                     <label class="checkbox-label" for="mousepad">
-                        <input type="checkbox" id="mousepad" name="mousepad" value="mousepad">
+                        <input type="checkbox" id="mousepad" name="mousepad" value="mousepad"">
                         <span class="checkbox-product-custom">
                             <span class="name-option">Mousepad</span>
                         </span>
@@ -144,7 +141,7 @@
                 
                 <label class="checkbox-label" for="tv2home"> 
                     <p class="name">TV 2 HOME</p>
-                    <input type="checkbox" id="tv2home" name="tv2home" value="tv2home">
+                    <input type="checkbox" id="tv2home" name="tv2home" value="tv2home" checked="checked">
                     <span class="checkbox-custom"></span>
                     <span class="checkbox-checked"></span>                   
                 </label>
@@ -241,11 +238,13 @@
                         $filtro = $pagina_atual * $total_reg;
 
                         $sql = "SELECT p.nome, 
-                                    p.preco_unitario,
-                                    i.url_imagem
-                                    FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
-                                    WHERE (p.nome LIKE '$textoPesquisa' OR p.descricao LIKE '$textoPesquisa' OR p.detalhe LIKE '$textoPesquisa')
-                                    LIMIT $filtro, $total_reg";
+                                p.preco_unitario,
+                                i.url_imagem
+                                FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
+                                WHERE colecao_fk = 2
+                                GROUP BY p.nome
+                                ORDER BY p.preco_unitario ASC
+                                LIMIT $filtro, $total_reg";
 
                         $dados = mysqli_query($conexao, $sql)
 
@@ -314,16 +313,8 @@
                         <img class="icon-arrow" alt="Avançar" src="../../public/assets/icons/ir-slider.svg" onclick="plusDivs(+1)">
                     </div>
             <?php 
-                } else {
-            ?> 
-                    <div id="nothingToReturn">
-                        <p>Ops... não conseguimos encontrar o que você está procurando :(</p>
-                        <p>Que tal dar uma olhada nos nossos outros <a href="index.php">produtos?</a></p>
-                    </div>
-            <?php      
                 }
-            ?>
-
+            ?> 
             </div>
             
         </div>
