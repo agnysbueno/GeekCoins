@@ -23,4 +23,5 @@ Mousepads <img src="/public/assets/icons/mousepad.svg" widht=auto height=15px> <
 ## Mockups
 <img src="/public/assets/images/index.png">
 <img src="/public/assets/images/pesquisa.png">
+<img src="/public/assets/images/produto.png">
 <img src="/public/assets/images/pagamento.png">
