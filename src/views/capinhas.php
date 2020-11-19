@@ -112,7 +112,7 @@
                     </label>
 
                     <label class="checkbox-label" for="capinha">
-                        <input type="checkbox" id="capinha" name="capinha" value="capinha" checked="checked>
+                        <input type="checkbox" id="capinha" name="capinha" value="capinha" checked="checked">
                         <span class="checkbox-product-custom">
                             <span class="name-option">Capinha</span>
                         </span>

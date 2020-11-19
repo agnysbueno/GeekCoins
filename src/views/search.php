@@ -261,7 +261,7 @@
                         
                             <div class="hover-position">
                                 <div class="card">
-                                    <a href="#">
+                                    <a href="product.php">
                                         <img src="<?php echo($rsProduto['url_imagem']) ?>">
                                     </a>
                                     <div class="card-info">

@@ -29,28 +29,29 @@ $conexao = conexaoMysql();
                 </div>
                 <nav id="menu-items" class="center">  
                     <ul>
-                        <!-- <li class="preto">
-                            <div class="dropdown">
-                                <button class="dropbtn">Temas</button>
-                                <div class="dropdown-content">
-                                    <a href="#">Naruto</a>
-                                    <a href="#">Super Mario</a>
-                                    <a href="#">Berserk</a>
-                                    <a href="#">Bleach</a>
-                                    <a href="#">Clash Royale</a>
-                                    <a href="#">LOL</a>
-                                    <a href="#">Akira</a>
+                            <li class="preto">
+                                <div class="dropdown">
+                                    <button class="dropbtn">Temas</button>
+                                    <div class="dropdown-content">
+                                        <a href="#">Naruto</a>
+                                        <a href="#">Super Mario</a>
+                                        <a href="#">Berserk</a>
+                                        <a href="#">Bleach</a>
+                                        <a href="#">Clash Royale</a>
+                                        <a href="#">LOL</a>
+                                        <a href="#">Akira</a>
+                                        <a href="#">How I Met Your Mother</a>
+                                        <a href="#">Arquivo X</a>
+                                        <a href="#">Karatê Kid</a>
+                                    </div>
                                 </div>
-                            </div>
-                        </li> -->
-                        <a href="#"><li class="preto">Temas</li></a>
+                            </li>
                         <a href="canecas.php"><li class="preto">Canecas</li></a>
                         <a href="quadros.php"><li class="preto">Quadros</li></a> 
                         <a href="camisetas.php"><li class="preto">Camisetas</li></a> 
                         <a href="mousepads.php"><li class="preto">Mousepads</li></a> 
                         <a href="capinhas.php"><li class="preto">Capinhas</li></a> 
-                        <a href="#"><li class="preto">Coleções</li></a>
-                        <!-- <li class="preto">
+                        <li class="preto">
                             <div class="dropdown">
                                 <button class="dropbtn">Coleções</button>
                                 <div class="dropdown-content">
@@ -62,7 +63,7 @@ $conexao = conexaoMysql();
                                     <a href="#">Akira</a>
                                 </div>
                             </div>
-                        </li> -->  
+                        </li>  
                     </ul>
                 </nav>
             </header>

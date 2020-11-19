@@ -112,7 +112,9 @@ $conexao = conexaoMysql();
                             <input class="type-cep" type="text" name="cep" placeholder="00000-000">
                         </form>
                     </div>
-                    <button type="button">Comprar</button>
+                    
+                    <button type="button" onclick="comprar()"> Comprar </button>
+                    
                 </div>
             </div>
 

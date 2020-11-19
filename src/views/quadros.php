@@ -242,8 +242,8 @@
                                 i.url_imagem
                                 FROM produto AS p INNER JOIN imagem AS i ON p.idproduto = i.produto_fk
                                 WHERE categoria_fk = 5
-                                ORDER BY p.preco_unitario ASC
                                 GROUP BY p.nome
+                                ORDER BY p.preco_unitario ASC
                                 LIMIT $filtro, $total_reg";
 
                         $dados = mysqli_query($conexao, $sql)

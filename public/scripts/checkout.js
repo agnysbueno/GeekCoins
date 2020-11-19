@@ -25,6 +25,8 @@ function showDivs(n) {
     dots[checkoutIndex-1].className += " selected";
 };
 
+/**************************** Preço ******************************************/
+
 function add(obj){
     let item = document.getElementById(""+obj.id+"");
     let quantity = item.children[1].children[1].children[1];
@@ -68,6 +70,7 @@ function reduce(obj){
           let name = confirm("Você deseja mesmo excluir esse item do carrinho?")
             if (name == true) {
               item.parentNode.removeChild(item);
+              updateTotal();
             }
             else{
               quantity.value = 1;
@@ -86,13 +89,43 @@ function updateTotal() {
   let divSubtotal = document.getElementById("subtotal");
   let divTotal = document.getElementById("total"); 
 
-  price1 = price1.innerText.split(" ")[1];
-  price2 = price2.innerText.split(" ")[1];
-  frete = frete.innerText.split(" ")[1];
+  console.log("mousepad: "+ price1 + " caneca: "+ price2)
 
-  price1 = parseFloat(price1.replace(',' , '.'));
-  price2 = parseFloat(price2.replace(',' , '.'));
-  frete = parseFloat(frete.replace(',' , '.'));
+
+  if (price1 !== null && price2 !== null){
+        price1 = price1.innerText.split(" ")[1];
+        price2 = price2.innerText.split(" ")[1];
+        frete = frete.innerText.split(" ")[1];
+
+        price1 = parseFloat(price1.replace(',' , '.'));
+        price2 = parseFloat(price2.replace(',' , '.'));
+        frete = parseFloat(frete.replace(',' , '.'));
+
+        console.log("os não são null")
+
+  } else if (price1 !== null) {
+        price1 = price1.innerText.split(" ")[1];
+        frete = frete.innerText.split(" ")[1];
+
+        price1 = parseFloat(price1.replace(',' , '.'));
+        frete = parseFloat(frete.replace(',' , '.'));
+        price2 = 0.00;
+
+        console.log("2 é null")
+  } else if (price2 !== null) {
+        price2 = price2.innerText.split(" ")[1];
+        frete = frete.innerText.split(" ")[1];
+
+        price2 = parseFloat(price2.replace(',' , '.'));
+        frete = parseFloat(frete.replace(',' , '.'));
+        price1 = 0.00;
+
+        console.log("1 é null")
+  } else {
+        let divPedido = document.getElementById("products");
+
+        divPedido.innerHTML = "<p> Sem produtos no carrinho </p>";
+  }
 
   let subtotal = parseFloat(price1 + price2).toFixed(2);
 
@@ -169,3 +202,10 @@ function searchcep(valor) {
         clean_form_cep();
     }
 };
+
+/**************************** Finzalizar ******************************************/
+
+function finalizar(){
+    alert("Compra Finalizada com sucesso!")
+    window.location.href = "http://localhost/geekcoins/src/views/"
+}

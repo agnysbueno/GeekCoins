@@ -26,8 +26,6 @@ if (!empty($_POST)) {
                             VALUES ('$logradouro', '$numero', '$complemento', '$referencia', '$bairro', '$cep', '$cidade', '$estado', $idUser)"); */
 
     $msg = 'Usuario Criado com Sucesso!';
-} else {
-    ?> <p>Error</p> <?php
 }
 ?>
 
@@ -146,7 +144,7 @@ if (!empty($_POST)) {
                             </label>
                             
                             <label for="submit-form">
-                                <input type="submit"/>
+                                <input type="submit" hidden/>
                             </label>
                         </form>
                     </div>
@@ -183,7 +181,7 @@ if (!empty($_POST)) {
                                 </p>
     
                                 <label for="submit-form" tabindex="0">
-                                    <button>
+                                    <button onclick="finalizar();">
                                         <p>Finalizar compra</p>
                                     </button>
                                 </label>
@@ -209,7 +207,7 @@ if (!empty($_POST)) {
                                 </div>
     
                                 <label for="submit-form" tabindex="0">
-                                    <button>
+                                    <button onclick="finalizar();">
                                         <p>Finalizar compra</p>
                                     </button>
                                 </label>
@@ -227,7 +225,7 @@ if (!empty($_POST)) {
                                 </div>
     
                                 <label for="submit-form" tabindex="0">
-                                    <button>
+                                    <button onclick="finalizar();">
                                         <p>Finalizar compra</p>
                                     </button>
                                 </label>

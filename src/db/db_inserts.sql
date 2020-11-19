@@ -75,12 +75,12 @@ INSERT INTO tag VALUES(22, 'Personalizado');
 
 INSERT INTO produto VALUES (1,'Caneca Itachi','Os fãs de Naruto não estavam preparados para essa caneca do Itachi!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',33.99,2,3);
 INSERT INTO produto VALUES (2,'Caneca Ichigo','A coleção Bleach está cada vez melhor! A famosa caneca Ichigo agora tem duas versões de cores: detalhes em preto ou em vermelho. Para agradar todos os gostos, um verdadeiro item de colecionador!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,4);
-INSERT INTO produto VALUES (3,'Mousepad Espada League of Legends','E esse mousepad que parece que a espada tá saindo? 3D tudo de bom','Mousepad feito em espuma',40.00,4,5);
+INSERT INTO produto VALUES (3,'Mousepad Espada League of Legends','E esse mousepad que parece que a espada tá saindo? 3D tudo de bom','Mousepad feito em espuma',39.99,4,5);
 INSERT INTO produto VALUES (4,'Camiseta Luana','Os caçadores de easter eggs e referências piram com essa camiseta!','Camiseta 100% algodão com estampa em sublimação',69.99,1,6);
 INSERT INTO produto VALUES (5,'Capinha Nahito Pain','Agora você também pode decorar seu celular com a capinha do Nahito','Capinha de celular para o modelo Samsung Galaxy S8 Plus',29.99,3,3);
 INSERT INTO produto VALUES (6,'Caneca Luana','Os caçadores de easter eggs e referências piram com essa caneca!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',39.99,2,6);
 INSERT INTO produto VALUES (7,'Caneca Mario World','Caneca para os clássicos fãs da nitendo, não tem como não amar!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,7);
-INSERT INTO produto VALUES (8,'Mousepad Luana','Os caçadores de easter eggs e referências piram com esse mousepad!','Mousepad feito em espuma',45.00,4,6);
+INSERT INTO produto VALUES (8,'Mousepad Luana','Os caçadores de easter eggs e referências piram com esse mousepad!','Mousepad feito em espuma',44.99,4,6);
 INSERT INTO produto VALUES (9,'Caneca League of Legends','Caneca com alguns dos melhores personagens dos jogos, para impor respeito!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,5);
 INSERT INTO produto VALUES (10,'Caneca Berserk','','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',42.99,2,1);
 INSERT INTO produto VALUES (11,'Caneca Death Note','','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',42.99,2,1);

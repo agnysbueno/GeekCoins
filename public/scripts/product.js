@@ -50,3 +50,7 @@ window.onclick = function(event) {
     }
   }
 }
+
+function comprar(){
+  window.location.href = "http://localhost/geekcoins/src/views/checkout.php"
+}
