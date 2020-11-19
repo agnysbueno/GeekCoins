@@ -154,7 +154,13 @@ main{
     min-height: 380px;
 }
 
-#slider-collections {
+#section-collections a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+}
+
+#slider-collections{
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -170,6 +176,7 @@ main{
 .collection-column-1 {
     width: 70%;
     height: 100%;
+    margin: 0;
 }
 
 .image-collection {

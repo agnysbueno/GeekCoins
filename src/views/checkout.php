@@ -1,7 +1,34 @@
 <?php
 require_once('../db/conexao.php');
 $conexao = conexaoMysql();
+$msg = '';
 
+if (!empty($_POST)) {
+    $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
+    $email = isset($_POST['email']) ? $_POST['email'] : '';
+    $tel = isset($_POST['telefone']) ? $_POST['telefone'] : ''; 
+
+    $conexao->query("INSERT INTO usuario (idusuario, nome, email, telefone)
+                            VALUES (NULL, '$nome', '$email', '$tel')");
+
+    $idUser = ($conexao->insert_id);
+
+    /* $cep = isset($_POST['cep']) ? $_POST['cep'] : '';
+    $logradouro = isset($_POST['logradouro']) ? $_POST['logradouro'] : '';
+    $numero = isset($_POST['numero']) ? $_POST['numero'] : '';
+    $complemento = isset($_POST['complemento']) ? $_POST['complemento'] : '';
+    $referencia = isset($_POST['referencia']) ? $_POST['referencia'] : '';
+    $bairro = isset($_POST['bairro']) ? $_POST['bairro'] : '';
+    $cidade = isset($_POST['cidade']) ? $_POST['cidade'] : '';
+    $estado = isset($_POST['estado']) ? $_POST['estado'] : '';
+
+    $conexao->query("INSERT INTO endereco (logradouro, numero, complemento, ponto_referencia, bairro, cep, cidade, estado, usuario_fk)
+                            VALUES ('$logradouro', '$numero', '$complemento', '$referencia', '$bairro', '$cep', '$cidade', '$estado', $idUser)"); */
+
+    $msg = 'Usuario Criado com Sucesso!';
+} else {
+    ?> <p>Error</p> <?php
+}
 ?>
 
 <!DOCTYPE html>
@@ -59,18 +86,20 @@ $conexao = conexaoMysql();
                             <p class="cinza-medio">Dados Pessoais</p>
                             <img class="arrow" src="../../public/assets/icons/angle-up-solid.svg" alt="Recolher">
                         </div>
-                        <form id="data-info" class="register-info" action="" method="POST">
-                            <label for="nome">
-                                <input type="name" name="nome" size="32" placeholder="Nome completo">
-                            </label>
-
+                        <form id="data-info" class="register-info" method="POST">
                             <label for="email">
                                 <input type="email" name="email" size="32" placeholder="nome@mail.com">
+                            </label>
+
+                            <label for="nome">
+                                <input type="name" name="nome" size="32" placeholder="Nome completo">
                             </label>
                                 
                             <label for="telefone">
                                 <input type="text" name="telefone" size="32" placeholder="(XX) 0000-0000">
                             </label>
+
+                            <input type="submit" id="submit-form" hidden/>
                         </form>
                     </div>
                     
@@ -81,7 +110,7 @@ $conexao = conexaoMysql();
                             <img class="arrow" src="../../public/assets/icons/angle-up-solid.svg" alt="Recolher">
                         </div>
 
-                        <form id="delivery-info" class="register-info" action="." method="GET">
+                        <form id="delivery-info" class="register-info" action="checkout.php" method="POST">
                     
                             <label for="cep">
                                 <input type="text" name="cep" size="10" maxlength="9" placeholder="CEP" id="cep"
@@ -115,7 +144,10 @@ $conexao = conexaoMysql();
                             <label for="estado">
                                 <input type="text" name="estado" size="2" placeholder="UF" id="uf">
                             </label>
-                                                  
+                            
+                            <label for="submit-form">
+                                <input type="submit"/>
+                            </label>
                         </form>
                     </div>
                 </div>
@@ -150,9 +182,11 @@ $conexao = conexaoMysql();
                                     pago em qualquer banco até a data de vencimento.
                                 </p>
     
-                                <button>
-                                    <p>Finalizar compra</p>
-                                </button>
+                                <label for="submit-form" tabindex="0">
+                                    <button>
+                                        <p>Finalizar compra</p>
+                                    </button>
+                                </label>
                             </div>
                             
                             <div id="description-cartao" class="myCheckout">
@@ -174,9 +208,11 @@ $conexao = conexaoMysql();
                                     </div>
                                 </div>
     
-                                <button>
-                                    <p>Finalizar compra</p>
-                                </button>
+                                <label for="submit-form" tabindex="0">
+                                    <button>
+                                        <p>Finalizar compra</p>
+                                    </button>
+                                </label>
                             </div>
 
                             <div id="description-cupom" class="myCheckout">
@@ -190,16 +226,20 @@ $conexao = conexaoMysql();
                                     <p class="laranja-escuro">R$ 0,00</p>
                                 </div>
     
-                                <button>
-                                    <p>Finalizar compra</p>
-                                </button>
+                                <label for="submit-form" tabindex="0">
+                                    <button>
+                                        <p>Finalizar compra</p>
+                                    </button>
+                                </label>
                             </div>
                         </div>
                         
                     </div>
                     
                 </div>
-                
+                <?php if ($msg): ?>
+                <p><?=$msg?></p>
+                <?php endif; ?>    
             </div>
 
             <div id="column-2">

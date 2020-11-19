@@ -267,15 +267,7 @@ main {
 
 #payment-type .description button:hover {
     background-color: #343434;
-}
-
-#payment-type .description button:hover p{
     color: #FFD72F;
-}
-
-#payment-type .description button p{
-    font-size: 22px;
-    font-weight: 500;
 }
 
 #payment-type #description-cupom input {

@@ -92,13 +92,13 @@ $conexao = conexaoMysql();
                    
                     <div class="slider-container">
                         <div id="slider-images">
-                            <a href="#">
+                            <a href="akira.php">
                                 <img class="mySlides" src="../../public/assets/images/banner-camiseta-akira.png" width="100%">
                             </a>
-                            <a href="#">
+                            <a href="akira.php">
                                 <img class="mySlides" src="../../public/assets/images/banner-caneca-akira.png" width="100%">
                             </a>
-                            <a href="#">
+                            <a href="akira.php">
                                 <img class="mySlides" src="../../public/assets/images/banner-mousepad-akira.png" width="100%">
                             </a>
                         </div>
@@ -235,53 +235,58 @@ $conexao = conexaoMysql();
                     <div id="slider-collections">
                         <img class="icon-arrow" src="../../public/assets/icons/voltar-slider.svg" alt="voltar" onclick=" return plusCollection(-1)">
 
-                        <div class="collections myCollection">
-                            <div class="collection-column-1">
-                                <div class="image-collection">
-                                    <img src="../../public/assets/images/caneca-berseker.png" alt="Ilustração do anime Berserk">
+                        <a href="bloodlabel.php">
+                            <div class="collections myCollection">
+                        
+                                <div class="collection-column-1">
+                                    <div class="image-collection">
+                                        <img src="../../public/assets/images/caneca-berseker.png" alt="Ilustração do anime Berserk">
+                                    </div>
+                                    <div class="caption-collection">
+                                        <img class="icon-collection" src="../../public/assets/icons/caneca.svg" alt="Ícone de caneca" title="Ver coleção">
+                                        <div  class="productname-collection">
+                                            <p class="cinza-escuro">Caneca Berserk</p>
+                                        </div>                                    
+                                        <img class="icon-collection" src="../../public/assets/icons/carteira.svg" alt="Ícone de carteira" title="Ir para o produto">
+                                    </div>
                                 </div>
-                                <div class="caption-collection">
-                                    <img class="icon-collection" src="../../public/assets/icons/caneca.svg" alt="Ícone de caneca" title="Ver coleção">
-                                    <div  class="productname-collection">
-                                        <p>Caneca Berserk</p>
-                                    </div>                                    
-                                    <img class="icon-collection" src="../../public/assets/icons/carteira.svg" alt="Ícone de carteira" title="Ir para o produto">
-                                </div>
-                            </div>
-                            <div class="collection-column-2">
-                                <div class="name-collection">
-                                    <h1 class="firstname-collection">Blood</h1>
-                                    <h1 class="secondname-collection">Label</h1>
-                                </div>   
-                                <div class="description-collection">
-                                    <p>Coleção inspirada no que tem de mais sangrento...</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="collections myCollection">
-                            <div class="collection-column-1">
-                                <div class="image-collection">
-                                    <img src="../../public/assets/images/cobra-kai_dark.png" alt="Quadro da série Cobra Kai">
-                                    <img src="../../public/assets/images/cobra-kai_light.png" alt="Quadro da série Cobra Kai">
-                                </div>
-                                <div class="caption-collection">
-                                    <img class="icon-collection" src="../../public/assets/icons/quadro.svg" alt="Ícone de caneca" title="Ver coleção">
-                                    <div  class="productname-collection">
-                                        <p>Quadro Cobra Kai</p>
-                                    </div>                                    
-                                    <img class="icon-collection" src="../../public/assets/icons/carteira.svg" alt="Ícone de carteira" title="Ir para o produto">
+                                <div class="collection-column-2">
+                                    <div class="name-collection">
+                                        <h1 class="firstname-collection">Blood</h1>
+                                        <h1 class="secondname-collection">Label</h1>
+                                    </div>   
+                                    <div class="description-collection">
+                                        <p>Coleção inspirada no que tem de mais sangrento...</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="collection-column-2">
-                                <div class="name-collection tv">
-                                    <h1 class="firstname-collection">TV2Home</h1>
-                                </div>   
-                                <div class="description-collection">
-                                    <p>Frases que nos marcaram na televisão, direto para a parede de casa.</p>
+                        </a>
+                        
+                        <a href="tv2home.php">
+                            <div class="collections myCollection">
+                                <div class="collection-column-1">
+                                    <div class="image-collection">
+                                        <img src="../../public/assets/images/quadro-tv2home-cobra-kai-dark.png" alt="Quadro da série Cobra Kai">
+                                        <img src="../../public/assets/images/quadro-tv2home-cobra-kai-light.png" alt="Quadro da série Cobra Kai">
+                                    </div>
+                                    <div class="caption-collection">
+                                        <img class="icon-collection" src="../../public/assets/icons/quadro.svg" alt="Ícone de caneca" title="Ver coleção">
+                                        <div  class="productname-collection">
+                                            <p class="cinza-escuro">Quadro Cobra Kai</p>
+                                        </div>                                    
+                                        <img class="icon-collection" src="../../public/assets/icons/carteira.svg" alt="Ícone de carteira" title="Ir para o produto">
+                                    </div>
+                                </div>
+                                <div class="collection-column-2">
+                                    <div class="name-collection tv">
+                                        <h1 class="firstname-collection">TV2Home</h1>
+                                    </div>   
+                                    <div class="description-collection">
+                                        <p>Frases que nos marcaram na televisão, direto para a parede de casa.</p>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>    
 
                         <img class="icon-arrow" src="../../public/assets/icons/ir-slider.svg" alt="avancar" onclick="return plusCollection(+1)">
                     </div>

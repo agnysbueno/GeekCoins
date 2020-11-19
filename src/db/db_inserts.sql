@@ -42,6 +42,9 @@ INSERT INTO tema VALUES (7,'Mario');
 INSERT INTO tema VALUES (8,'Boku no Hero');
 INSERT INTO tema VALUES (9,'Akira');
 INSERT INTO tema VALUES (10,'LOL');
+INSERT INTO tema VALUES (11,'How I Met Your Mother');
+INSERT INTO tema VALUES (12,'Arquivo X');
+INSERT INTO tema VALUES (13,'Karatê Kid');
 
 -- inserting data into table "tag"
 
@@ -79,6 +82,15 @@ INSERT INTO produto VALUES (6,'Caneca Luana','Os caçadores de easter eggs e ref
 INSERT INTO produto VALUES (7,'Caneca Mario World','Caneca para os clássicos fãs da nitendo, não tem como não amar!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,7);
 INSERT INTO produto VALUES (8,'Mousepad Luana','Os caçadores de easter eggs e referências piram com esse mousepad!','Mousepad feito em espuma',45.00,4,6);
 INSERT INTO produto VALUES (9,'Caneca League of Legends','Caneca com alguns dos melhores personagens dos jogos, para impor respeito!','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',36.99,2,5);
+INSERT INTO produto VALUES (10,'Caneca Berserk','','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',42.99,2,1);
+INSERT INTO produto VALUES (11,'Caneca Death Note','','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',42.99,2,1);
+INSERT INTO produto VALUES (12,'Caneca Tokyo Ghoul','','Caneca com profundidade de 30 centímetros feita em porcelana na cor branca e estampa por sublimação.',42.99,2,1);
+INSERT INTO produto VALUES (13,'Quadro How I Met Your Mother','','Quadro com 15cm de largura e 20cm de altura',19.99,5,2);
+INSERT INTO produto VALUES (14,'Quadro I Want to Believe','','Quadro com 15cm de largura e 20cm de altura',19.99,5,2);
+INSERT INTO produto VALUES (15,'Quadro Legendary!','','Quadro com 15cm de largura e 20cm de altura',19.99,5,2);
+INSERT INTO produto VALUES (16,'Quadro The truth is out there','','Quadro com 15cm de largura e 20cm de altura',19.99,5,2);
+INSERT INTO produto VALUES (17,'Quadro Cobra Kai','','Quadro com 15cm de largura e 40cm de altura',29.99,5,2);
+INSERT INTO produto VALUES (18,'Quadro Miyagi','','Quadro com 15cm de largura e 40cm de altura',29.99,5,2);
 
 -- inserting data into table "imagem"
 
@@ -91,6 +103,17 @@ INSERT INTO imagem VALUES (6,'../../public/assets/images/caneca-akira-luana.png'
 INSERT INTO imagem VALUES (7,'../../public/assets/images/caneca-mario-world.png',7);
 INSERT INTO imagem VALUES (8,'../../public/assets/images/mousepad-akira-luana.png',8);
 INSERT INTO imagem VALUES (9,'../../public/assets/images/caneca-league-of-legends.png',9);
+INSERT INTO imagem VALUES (10,'../../public/assets/images/caneca-bl-berseker.png',10);
+INSERT INTO imagem VALUES (11,'../../public/assets/images/caneca-bl-death-note.png',11);
+INSERT INTO imagem VALUES (12,'../../public/assets/images/caneca-bl-tokyo-ghoul.png',12);
+INSERT INTO imagem VALUES (13,'../../public/assets/images/quadro-tv2home-how-i-met-your-mother.png',13);
+INSERT INTO imagem VALUES (14,'../../public/assets/images/quadro-tv2home-i-want-to-believe.png',14);
+INSERT INTO imagem VALUES (15,'../../public/assets/images/quadro-tv2home-its-going-to-be-legendary.png',15);
+INSERT INTO imagem VALUES (16,'../../public/assets/images/quadro-tv2home-the-truth-is-out-there.png',16);
+INSERT INTO imagem VALUES (17,'../../public/assets/images/quadro-tv2home-cobra-kai-light',17);
+INSERT INTO imagem VALUES (18,'../../public/assets/images/quadro-tv2home-cobra-kai-dark',17);
+INSERT INTO imagem VALUES (19,'../../public/assets/images/quadro-tv2home-miyagi-do-light.png',18);
+INSERT INTO imagem VALUES (20,'../../public/assets/images/quadro-tv2home-miyagi-do-dark.png',18);
 
 -- inserting data into table "pedido"
 
@@ -111,6 +134,13 @@ INSERT INTO produto_tema VALUES (6,6,9);
 INSERT INTO produto_tema VALUES (7,7,7);
 INSERT INTO produto_tema VALUES (8,8,9);
 INSERT INTO produto_tema VALUES (9,9,10);
+INSERT INTO produto_tema VALUES (10,10,6);
+INSERT INTO produto_tema VALUES (13,13,9);
+INSERT INTO produto_tema VALUES (14,15,9);
+INSERT INTO produto_tema VALUES (15,14,12);
+INSERT INTO produto_tema VALUES (16,16,12);
+INSERT INTO produto_tema VALUES (17,17,13);
+INSERT INTO produto_tema VALUES (18,18,13);
 
 -- inserting data into table "produto_tag"
 
@@ -148,6 +178,29 @@ INSERT INTO produto_tag VALUES(31, 7, 6);
 INSERT INTO produto_tag VALUES(32, 7, 8);
 INSERT INTO produto_tag VALUES(33, 9, 6);
 INSERT INTO produto_tag VALUES(34, 9, 7);
+INSERT INTO produto_tag VALUES(35, 10, 1);
+INSERT INTO produto_tag VALUES(36, 10, 2);
+INSERT INTO produto_tag VALUES(37, 10, 3);
+INSERT INTO produto_tag VALUES(38, 11, 1);
+INSERT INTO produto_tag VALUES(39, 11, 2);
+INSERT INTO produto_tag VALUES(40, 11, 3);
+INSERT INTO produto_tag VALUES(41, 12, 1);
+INSERT INTO produto_tag VALUES(42, 12, 2);
+INSERT INTO produto_tag VALUES(43, 12, 3);
+INSERT INTO produto_tag VALUES(44, 13, 4);
+INSERT INTO produto_tag VALUES(45, 13, 9);
+INSERT INTO produto_tag VALUES(46, 14, 4);
+INSERT INTO produto_tag VALUES(47, 14, 13);
+INSERT INTO produto_tag VALUES(48, 15, 4);
+INSERT INTO produto_tag VALUES(49, 15, 9);
+INSERT INTO produto_tag VALUES(50, 16, 4);
+INSERT INTO produto_tag VALUES(51, 16, 13);
+INSERT INTO produto_tag VALUES(52, 17, 4);
+INSERT INTO produto_tag VALUES(53, 17, 7);
+INSERT INTO produto_tag VALUES(54, 18, 3);
+INSERT INTO produto_tag VALUES(55, 18, 4);
+INSERT INTO produto_tag VALUES(56, 18, 7);
+
 
 -- inserting data into table "produto_pedido"
 
