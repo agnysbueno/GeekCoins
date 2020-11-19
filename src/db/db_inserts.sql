@@ -83,7 +83,7 @@ INSERT INTO produto VALUES (9,'Caneca League of Legends','Caneca com alguns dos 
 -- inserting data into table "imagem"
 
 INSERT INTO imagem VALUES (1,'../../public/assets/images/caneca-itachi.png',1);
-INSERT INTO imagem VALUES (2,'../../public/assets/images/caneca-bleach.png',2);
+INSERT INTO imagem VALUES (2,'../../public/assets/images/caneca-ichigo-hollow-lados.png',2);
 INSERT INTO imagem VALUES (3,'../../public/assets/images/mousepad-league-of-legends.png',3);
 INSERT INTO imagem VALUES (4,'../../public/assets/images/camisa-akira-luana.png',4);
 INSERT INTO imagem VALUES (5,'../../public/assets/images/capinha-pain-s8.png',5);
