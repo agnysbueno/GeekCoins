@@ -3,30 +3,6 @@ require_once('../db/conexao.php');
 $conexao = conexaoMysql();
 $msg = '';
 
-if (!empty($_POST)) {
-    $nome = isset($_POST['nome']) ? $_POST['nome'] : '';
-    $email = isset($_POST['email']) ? $_POST['email'] : '';
-    $tel = isset($_POST['telefone']) ? $_POST['telefone'] : ''; 
-
-    $conexao->query("INSERT INTO usuario (idusuario, nome, email, telefone)
-                            VALUES (NULL, '$nome', '$email', '$tel')");
-
-    $idUser = ($conexao->insert_id);
-
-    /* $cep = isset($_POST['cep']) ? $_POST['cep'] : '';
-    $logradouro = isset($_POST['logradouro']) ? $_POST['logradouro'] : '';
-    $numero = isset($_POST['numero']) ? $_POST['numero'] : '';
-    $complemento = isset($_POST['complemento']) ? $_POST['complemento'] : '';
-    $referencia = isset($_POST['referencia']) ? $_POST['referencia'] : '';
-    $bairro = isset($_POST['bairro']) ? $_POST['bairro'] : '';
-    $cidade = isset($_POST['cidade']) ? $_POST['cidade'] : '';
-    $estado = isset($_POST['estado']) ? $_POST['estado'] : '';
-
-    $conexao->query("INSERT INTO endereco (logradouro, numero, complemento, ponto_referencia, bairro, cep, cidade, estado, usuario_fk)
-                            VALUES ('$logradouro', '$numero', '$complemento', '$referencia', '$bairro', '$cep', '$cidade', '$estado', $idUser)"); */
-
-    $msg = 'Usuario Criado com Sucesso!';
-}
 ?>
 
 <!DOCTYPE html>
