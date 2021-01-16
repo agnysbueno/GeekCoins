@@ -1,6 +1,6 @@
 # <img src="/public/assets/icons/logo-coin.svg" widht=auto height=50px> Geek Coins <img src="/public/assets/icons/logo-coin.svg" widht=auto height=50px> 
-A Geek Coins é uma loja virtual com foco no segmento geek, com a proposta de oferecer produtos personalizados por um preço acessível ao público geral. <br/>
-Ela surgiu como trabalho de graduação do curso de Design de Midias Digitais, pela Fatec Barueri.
+A Geek Coins é uma loja virtual com foco no segmento geek, com a finalidade de oferecer itens personalizados por um preço acessível ao público geral. O catálogo é inspirado em elementos da cultura pop - jogos, filmes, séries e animes. <br/>
+O projeto surgiu como trabalho de graduação do curso de Design de Midias Digitais, pela Fatec Barueri.
 
 <p align="center">
   <a href="#principais-produtos">Principais produtos</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
