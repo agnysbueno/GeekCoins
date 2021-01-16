@@ -4,8 +4,8 @@ Ela surgiu como trabalho de graduação do curso de Design de Midias Digitais, p
 
 <p align="center">
   <a href="#principais-produtos">Principais produtos</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#equipe">Equipe</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="#mockups">Tecnologias</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#criado-e-desenvolvido-por">Equipe</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#mockups">Mockups</a>
 </p>
 
