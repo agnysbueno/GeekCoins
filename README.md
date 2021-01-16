@@ -3,9 +3,9 @@ A Geek Coins é uma loja virtual com foco no segmento geek, com a proposta de of
 Ela surgiu como trabalho de graduação do curso de Design de Midias Digitais, pela Fatec Barueri.
 
 <p align="center">
-  <a href="#principais-produtos">Principais produtos</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#equipe">Equipe</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#mockups">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#principais-produtos">Principais produtos</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#equipe">Equipe</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="#mockups">Tecnologias</a>&nbsp;&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="#mockups">Mockups</a>
 </p>
 
