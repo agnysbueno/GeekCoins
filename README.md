@@ -23,8 +23,9 @@ Mousepads <img src="/public/assets/icons/mousepad.svg" widht=auto height=15px> <
 
 ![Badge](https://img.shields.io/static/v1?label=CSS&message=Estilo&color=3C5CA1&style=for-the-badge&logo=css3) <br/>
 ![Badge](https://img.shields.io/static/v1?label=PHP&message=Backend&color=858EB8&style=for-the-badge&logo=PHP) <br/>
-![Badge](https://img.shields.io/static/v1?label=MySQL&message=Banco+de+dados&color=0D5C82&style=for-the-badge&logo=mysql) <br/>
-![Badge](https://img.shields.io/static/v1?label=JavaScript&message=Interatividade&color=EBD531&style=for-the-badge&logo=javascript)
+![Badge](https://img.shields.io/static/v1?label=JavaScript&message=Dinamismo&color=EBD531&style=for-the-badge&logo=javascript) <br/>
+![Badge](https://img.shields.io/static/v1?label=MySQL&message=Banco+de+dados&color=0D5C82&style=for-the-badge&logo=mysql) 
+
 
 *******************************************************************************************************************************************************************
 ## Mockups
